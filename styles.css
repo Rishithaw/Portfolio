@@ -72,7 +72,7 @@ ul li a:focus::after {
 span{
     font-weight: bold;
     font-size: 16px;
-    background: linear-gradient(90deg, #00c6ff, #0072ff); /* customize here */
+    background: linear-gradient(90deg, #00c6ff, #0072ff); 
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -95,7 +95,7 @@ span{
 
 h1{
     font-weight: bold;
-    background: linear-gradient(90deg, #00c6ff, #0072ff); /* customize here */
+    background: linear-gradient(90deg, #00c6ff, #0072ff); 
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -122,42 +122,14 @@ h1{
     margin: 0 auto;
 }
 
-.rotating-titles {
-    height: 24px; /* Adjust based on your font size */
+#rotating-titles {
+    height: 32px; 
     overflow: hidden;
     text-align: center;
     margin-top: 10px;
     position: relative;
 }
-  
-.title-wrapper {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-  
-.title-slide {
-    display: flex;
-    flex-direction: column;
-    animation: slideTitles 54s ease-in-out infinite;
 
-}
-  
-.title-slide span {
-    font-size: 18px;
-    font-weight: bold;
-    color: white;
-    padding: 2px 0;
-}
-  
-  /* Slide-up keyframes */
-@keyframes slideTitles {
-  0%, 29.9%   { transform: translateY(0%); }
-  30%, 59.9%  { transform: translateY(-100%); }
-  60%, 89.9%  { transform: translateY(-200%); }
-  90%, 100%   { transform: translateY(0%); }
-}
 
 #education-section {
   padding: 60px 20px;
@@ -224,7 +196,6 @@ h1{
   box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
 }
 
-/*=====================================*/
 #institute {
   background-color: #2a2a2a;
   padding: 20px;
@@ -268,8 +239,6 @@ h1{
   box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
 }
 
-
-/*=====================================*/
 #college {
   background-color: #2a2a2a;
   padding: 20px;
@@ -312,9 +281,6 @@ h1{
   transform: translateY(-5px);
   box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
 }
-
-
-/*=====================================*/
 
    
 

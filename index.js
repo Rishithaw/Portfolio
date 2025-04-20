@@ -27,3 +27,28 @@ document.addEventListener('DOMContentLoaded', () => {
     element.textContent = ""; // Clear initial text
     type();
 });
+
+const titles = ["Full Stack Developer", "UI/UX Designer", "Web Developer"];
+let titleIndex = 0;
+let charIndex = 0;
+let isDeletingTitle = false;
+const titleElement = document.querySelector('#title-typer');
+
+function typeTitle() {
+    let currentTitle = titles[titleIndex];
+    titleElement.textContent = isDeletingTitle ? currentTitle.substring(0, charIndex--) : currentTitle.substring(0, charIndex++);
+
+    if (!isDeletingTitle && charIndex === currentTitle.length + 1) {
+        setTimeout(() => isDeletingTitle = true, 1000);
+    } else if (isDeletingTitle && charIndex === 0) {
+        isDeletingTitle = false;
+        titleIndex = (titleIndex + 1) % titles.length;
+    }
+
+    const delay = isDeletingTitle ? 80 : 120;
+    setTimeout(typeTitle, delay);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    typeTitle();
+});
