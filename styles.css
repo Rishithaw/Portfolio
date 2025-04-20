@@ -87,7 +87,7 @@ span{
     color: #ffffff;
 }
 
-#home img{
+#profile{
     height: 400px;
     border-radius: 50%;
     padding-top: 40px;
@@ -159,26 +159,14 @@ h1{
   90%, 100%   { transform: translateY(0%); }
 }
 
-.words{
-    height: 60px;
-    overflow: hidden;
-    align-items: center;
-}
-.words span{
-    padding-bottom: 10px;
-    display: block;
-    line-height: 60px;
-    animation: spin-words 30s infinite;
-}
-
-/* .education-section {
+#education-section {
   padding: 60px 20px;
   text-align: center;
   background-color: #1c1c1c;
   color: white;
 }
 
-.education-section h2 {
+#education-section h2 {
   font-size: 32px;
   margin-bottom: 40px;
   background: linear-gradient(90deg, #00c6ff, #0072ff);
@@ -186,14 +174,14 @@ h1{
   -webkit-text-fill-color: transparent;
 }
 
-.education-cards {
+#education-cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
 }
 
-.edu-card {
+#school {
   background-color: #2a2a2a;
   padding: 20px;
   border-radius: 20px;
@@ -203,39 +191,130 @@ h1{
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.edu-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
-}
-
-.edu-card img {
-  max-height: 80px;
+#school img {
+  max-height: 200px;
   margin-bottom: 20px;
-  object-fit: contain;
+  object-fit: cover;
 }
 
-.edu-card h3 {
+#school h3 {
   font-size: 18px;
   margin-bottom: 10px;
 }
 
-.edu-card p {
+#school p {
   font-size: 14px;
   color: #ccc;
   margin-bottom: 15px;
 }
 
-.edu-card a {
+#school a {
   text-decoration: none;
   color: #00c6ff;
   font-weight: bold;
   transition: color 0.3s;
 }
 
-.edu-card a:hover {
+#school a:hover {
   color: #ffffff;
-} */
+}
 
+#school:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+}
+
+/*=====================================*/
+#institute {
+  background-color: #2a2a2a;
+  padding: 20px;
+  border-radius: 20px;
+  width: 280px;
+  text-align: center;
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#institute img {
+  max-height: 200px;
+  margin-bottom: 20px;
+  object-fit: cover;
+}
+
+#institute h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+#institute p {
+  font-size: 14px;
+  color: #ccc;
+  margin-bottom: 15px;
+}
+
+#institute a {
+  text-decoration: none;
+  color: #00c6ff;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+#institute a:hover {
+  color: #ffffff;
+}
+
+#institute:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+}
+
+
+/*=====================================*/
+#college {
+  background-color: #2a2a2a;
+  padding: 20px;
+  border-radius: 20px;
+  width: 280px;
+  text-align: center;
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#college img {
+  max-height: 200px;
+  margin-bottom: 20px;
+  object-fit: cover;
+}
+
+#college h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+#college p {
+  font-size: 14px;
+  color: #ccc;
+  margin-bottom: 15px;
+}
+
+#college a {
+  text-decoration: none;
+  color: #00c6ff;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+#college a:hover {
+  color: #ffffff;
+}
+
+#college:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+}
+
+
+/*=====================================*/
 
    
 
