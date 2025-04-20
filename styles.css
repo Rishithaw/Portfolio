@@ -1,0 +1,271 @@
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #1C1C1C;
+}
+
+#header {
+    display: flex;    
+    justify-content: space-between;
+    align-items:center;
+    background-color: #f60505;
+    padding: 10px;
+}
+
+.branding {
+    display: flex;
+    align-items: center;
+}
+
+#icon {
+    height: 40px;
+    margin-right: 10px;
+}
+
+nav {
+    position: absolute;
+    left: 40%;
+}
+
+ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    padding: 3px;
+    margin: 0;
+}
+
+ul li {
+    padding: 0 10px;
+}
+
+ul li a {
+    position: relative;
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 5px 0;
+    display: inline-block;
+}
+
+/* Underline effect */
+ul li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s ease-in-out;
+}
+
+ul li a:hover::after,
+ul li a:focus::after {
+    width: 100%;
+}
+
+span{
+    font-weight: bold;
+    font-size: 16px;
+    background: linear-gradient(90deg, #00c6ff, #0072ff); /* customize here */
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+
+#home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+}
+
+#home img{
+    height: 400px;
+    border-radius: 50%;
+    padding-top: 40px;
+}
+
+h1{
+    font-weight: bold;
+    background: linear-gradient(90deg, #00c6ff, #0072ff); /* customize here */
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 20px;
+}
+
+#typer{
+    min-height: 50px;
+    color: transparent; /* Prevents flicker before JS types */
+    font-weight: bold;
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid #ffffff;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.rotating-titles {
+    height: 24px; /* Adjust based on your font size */
+    overflow: hidden;
+    text-align: center;
+    margin-top: 10px;
+    position: relative;
+}
+  
+.title-wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+  
+.title-slide {
+    display: flex;
+    flex-direction: column;
+    animation: slideTitles 54s ease-in-out infinite;
+
+}
+  
+.title-slide span {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    padding: 2px 0;
+}
+  
+  /* Slide-up keyframes */
+@keyframes slideTitles {
+  0%, 29.9%   { transform: translateY(0%); }
+  30%, 59.9%  { transform: translateY(-100%); }
+  60%, 89.9%  { transform: translateY(-200%); }
+  90%, 100%   { transform: translateY(0%); }
+}
+
+.words{
+    height: 60px;
+    overflow: hidden;
+    align-items: center;
+}
+.words span{
+    padding-bottom: 10px;
+    display: block;
+    line-height: 60px;
+    animation: spin-words 30s infinite;
+}
+
+/* .education-section {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #1c1c1c;
+  color: white;
+}
+
+.education-section h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.education-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.edu-card {
+  background-color: #2a2a2a;
+  padding: 20px;
+  border-radius: 20px;
+  width: 280px;
+  text-align: center;
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.edu-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+}
+
+.edu-card img {
+  max-height: 80px;
+  margin-bottom: 20px;
+  object-fit: contain;
+}
+
+.edu-card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.edu-card p {
+  font-size: 14px;
+  color: #ccc;
+  margin-bottom: 15px;
+}
+
+.edu-card a {
+  text-decoration: none;
+  color: #00c6ff;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.edu-card a:hover {
+  color: #ffffff;
+} */
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Color Use 	Hex Code	Description
+Primary Red	    #E10600	    Vibrant red from the wall
+Charcoal Black	#1C1C1C	    Deep black from the pattern
+Concrete Gray	#A6A6A6	    Cool gray from the wall
+White	        #FFFFFF	    For text/background balance
+Accent Tan	    #C1875F	    From the watch (subtle accent)*/
