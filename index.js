@@ -1,54 +1,51 @@
-//	Add the event listener to run when the page is loaded
-//document.addEventListener("DOMContentLoaded", load);
-const text = "I'm Rishitha Wickramasinghe";
-const speed = 150; // typing speed in ms
-const pause = 1100; // pause before backspace
-const element = document.querySelector('#typer');
+document.addEventListener('DOMContentLoaded', () => {
+    // Typing animation for main heading
+    let nameText = "I'm Rishitha Wickramasinghe";
+    let nameElement = document.querySelector('#typer');
+    let nameIndex = 0;
+    let deletingName = false;
 
-let i = 0;
-let isDeleting = false;
+    function typeName() {
+        nameElement.textContent = deletingName ? nameText.substring(0, nameIndex--) : nameText.substring(0, nameIndex++);
 
-function type() {
-    const currentText = isDeleting ? text.substring(0, i--) : text.substring(0, i++);
+        if (!deletingName && nameIndex > nameText.length) {
+            setTimeout(() => deletingName = true, 1100);
+        } else if (deletingName && nameIndex === 0) {
+            deletingName = false;
+        }
 
-    element.textContent = currentText;
-
-    if (!isDeleting && i > text.length) {
-        setTimeout(() => isDeleting = true, pause);
-    } else if (isDeleting && i === 0) {
-        isDeleting = false;
+        setTimeout(typeName, deletingName ? 75 : 150);
     }
 
-    const delay = isDeleting ? speed / 2 : speed;
-    setTimeout(type, delay);
-}
+    // Typing animation for rotating titles
+    let titles = ["Full Stack Developer", "UI/UX Designer", "Web Developer"];
+    let titleElement = document.querySelector('#title-typer');
+    let titleIndex = 0;
+    let charIndex = 0;
+    let deletingTitle = false;
 
-document.addEventListener('DOMContentLoaded', () => {
-    element.textContent = ""; // Clear initial text
-    type();
-});
+    function typeTitle() {
+        let current = titles[titleIndex];
+        titleElement.textContent = deletingTitle
+            ? current.substring(0, charIndex--)
+            : current.substring(0, charIndex++);
 
-const titles = ["Full Stack Developer", "UI/UX Designer", "Web Developer"];
-let titleIndex = 0;
-let charIndex = 0;
-let isDeletingTitle = false;
-const titleElement = document.querySelector('#title-typer');
+        if (!deletingTitle && charIndex > current.length) {
+            setTimeout(() => deletingTitle = true, 1000);
+        } else if (deletingTitle && charIndex === 0) {
+            deletingTitle = false;
+            titleIndex = (titleIndex + 1) % titles.length;
+        }
 
-function typeTitle() {
-    let currentTitle = titles[titleIndex];
-    titleElement.textContent = isDeletingTitle ? currentTitle.substring(0, charIndex--) : currentTitle.substring(0, charIndex++);
-
-    if (!isDeletingTitle && charIndex === currentTitle.length + 1) {
-        setTimeout(() => isDeletingTitle = true, 1000);
-    } else if (isDeletingTitle && charIndex === 0) {
-        isDeletingTitle = false;
-        titleIndex = (titleIndex + 1) % titles.length;
+        setTimeout(typeTitle, deletingTitle ? 80 : 120);
     }
 
-    const delay = isDeletingTitle ? 80 : 120;
-    setTimeout(typeTitle, delay);
-}
+    // Auto-update year in footer
+    let yearTag = document.getElementById("year");
+    if (yearTag) yearTag.textContent = new Date().getFullYear();
 
-document.addEventListener('DOMContentLoaded', () => {
+    // Start animations
+    nameElement.textContent = "";
+    typeName();
     typeTitle();
 });

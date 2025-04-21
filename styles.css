@@ -123,13 +123,17 @@ h1{
 }
 
 #rotating-titles {
-    height: 32px; 
-    overflow: hidden;
-    text-align: center;
-    margin-top: 10px;
-    position: relative;
+  position: relative;
+  height: 32px; 
+  overflow: hidden;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 0;
 }
 
+h2 span{
+  font-size: 20px;
+}
 
 #education-section {
   padding: 60px 20px;
@@ -282,27 +286,68 @@ h1{
   box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
 }
 
-   
+#footer{
+  background-color: #111;
+  color: #aaa;
+  text-align: center;
+  padding: 30px 20px;
+  margin-top: 60px;
+  font-size: 12px
+}  
 
+#copyright{
+  margin-bottom: 10px;
+  font-size: 12px;
+}
 
+#footer-nav{
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+  gap: 15px;
+}
 
+#footer-nav li a{
+  color: #888;
+  text-decoration: none;
+  transition: color 0.3s;
+}
 
+#footer_nav li a:hover{
+  color: #00c6ff;
+}
 
+#contact-info{
+  margin: 15px 0;
+  font-size: 12px;
+}
 
+#contact-info a{
+  color: #00c6ff;
+  text-decoration: none;
+}
 
+#contact-info a:hover{
+  text-decoration: underline;
+}
 
+#socials {
+  margin-top: 10px;
+}
 
+#socials a img{
+  width: 20px;
+  max-height: 20px;
+  margin: 0 8px;
+  filter: grayscale(100%) brightness(1.2);
+  transition: filter 0.3s;
+}
 
-
-
-
-
-
-
-
-
-
-
+#socials a:hover img {
+  filter: grayscale(0%) brightness(1.5);
+}
 
 
 
