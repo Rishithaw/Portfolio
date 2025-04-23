@@ -359,7 +359,7 @@ h2 span {
 /*Services*/
 
 #tools {
-  padding: 60px 20px 20px;
+  padding: 20px 20px 20px;
   text-align: center;
   background-color: #1C1C1C;
   color: #ffffff;
@@ -461,8 +461,8 @@ h2 span {
 }
 
 #scenebuilder img {
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   object-fit: contain;
   margin-bottom: 10px;
 }
@@ -475,6 +475,138 @@ h2 span {
   font-size: 14px;
   color: #ccc;
   margin: 0;
+}
+
+/* What I Can Do For You Section */
+#services-overview {
+  padding: 50px 20px;
+  background-color: #A6A6A6;
+  color: white;
+  text-align: center;
+}
+
+#services-overview h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: #ffffff;
+  text-shadow: 1px 1px 4px #000;
+}
+
+#services-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#java {
+  background-color: #292974;
+  padding: 20px 25px;
+  border-radius: 15px;
+  width: 270px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+}
+
+#java:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.4);
+}
+
+#java h3 {
+  font-size: 1.3em;
+  margin-bottom: 10px;
+  color: #00c4ff;
+}
+
+#java p {
+  font-size: 0.95em;
+  line-height: 1.5;
+  color: #e0e0e0;
+}
+--------
+#database {
+  background-color: #292974;
+  padding: 20px 25px;
+  border-radius: 15px;
+  width: 270px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+}
+
+#database:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.4);
+}
+
+#database h3 {
+  font-size: 1.3em;
+  margin-bottom: 10px;
+  color: #00c4ff;
+}
+
+#database p {
+  font-size: 0.95em;
+  line-height: 1.5;
+  color: #e0e0e0;
+}
+
+#ui-making {
+  background-color: #292974;
+  padding: 20px 25px;
+  border-radius: 15px;
+  width: 270px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+}
+
+#ui-making:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.4);
+}
+
+#ui-making h3 {
+  font-size: 1.3em;
+  margin-bottom: 10px;
+  color: #00c4ff;
+}
+
+#ui-making p {
+  font-size: 0.95em;
+  line-height: 1.5;
+  color: #e0e0e0;
+}
+
+#website {
+  background-color: #292974;
+  padding: 20px 25px;
+  border-radius: 15px;
+  width: 270px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+}
+
+#website:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.4);
+}
+
+#website h3 {
+  font-size: 1.3em;
+  margin-bottom: 10px;
+  color: #00c4ff;
+}
+
+#website p {
+  font-size: 0.95em;
+  line-height: 1.5;
+  color: #e0e0e0;
 }
 
 #tech-stack {
@@ -817,6 +949,7 @@ h2 span {
 }
 
 #project-slides {
+  gap: 20px;
   height: 400px;
   display: flex;
   flex-wrap: nowrap;
