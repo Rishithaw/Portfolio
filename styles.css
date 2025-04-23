@@ -355,6 +355,7 @@ h2 span {
 #socials a:hover img {
   filter: grayscale(0%) brightness(1.5);
 }
+
 /*Services*/
 
 #tools {
@@ -428,7 +429,7 @@ h2 span {
   margin: 0;
 }
 
-#drfigmaawio {
+#figma {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -447,6 +448,30 @@ h2 span {
 }
 
 #figma p {
+  font-size: 14px;
+  color: #ccc;
+  margin: 0;
+}
+
+#scenebuilder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+#scenebuilder img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+#scenebuilder:hover {
+  transform: translateY(-5px);
+}
+
+#scenebuilder p {
   font-size: 14px;
   color: #ccc;
   margin: 0;
@@ -486,7 +511,7 @@ h2 span {
 }
 
 #java-card img {
-  max-height: 200px;  
+  max-height: 200px;
   margin-bottom: 20px;
   object-fit: cover;
 }
@@ -783,12 +808,216 @@ h2 span {
   box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
 }
 
+#projects {
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+#project-slides {
+  height: 400px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: start;
+}
 
+[id^="card"] {
+  width: 80px;
+  border-radius: .75rem;
+  background-size: cover;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 2rem;
+  /* margin: 0 10px; */
+  display: flex;
+  align-items: flex-end;
+  transition: .6s cubic-bezier(.28,-0.03,0,.99);
+  box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
+}
 
+[id^="card"] > [id^="row"] {
+  color: #a1f9f9;
+  display: flex;
+  flex-wrap: nowrap;
+}
 
+[id^="row"] > [id^="icon"] {
+  background: #223;
+  color: white;
+  border-radius: 50%;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px;
+}
 
+[id^="row"] > [id^="description"] {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+  
+  height: 100px;
+  width: 520px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition-delay: .3s;
+  transition: all .3s ease;
+}
 
+[id^="description"] p {
+  color: #6a6a6a;
+  backdrop-filter: blur(8px);
+  margin: 0;
+}
+
+[id^="description"] h4 {
+  margin: 0;
+  text-transform: uppercase;
+}
+
+input {
+  display: none;
+}
+
+input:checked + label {
+  width: 600px;
+}
+
+input:checked + label [id^="description"] {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+#card1 {
+  background-image: url('images/Terminal.jpeg');
+}
+#card2 {
+  background-image: url('images/Manage.jpeg');
+}
+#card3 {
+  background-image: url('images/Tictactoe.jpg');
+}
+#card4 {
+  background-image: url('images/Driving.jpg');
+}
+#card5 {
+  background-image: url('images/Gallery.jpg');
+}
+#card6 {
+  background-image: url('images/Portfolio.png');
+}
+
+#btn1 {
+  margin-top: 2px;
+  background-color: #fff;
+  color: #223;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+  align-self: flex-start;
+}
+
+#btn1:hover {
+  background-color: #ddd;
+}
+
+#btn2{
+  margin-top: 2px;
+  background-color: #fff;
+  color: #223;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+  align-self: flex-start;
+}
+
+#btn2:hover {
+  background-color: #ddd;
+}
+
+#btn3 {
+  margin-top: 2px;
+  background-color: #fff;
+  color: #223;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+  align-self: flex-start;
+}
+
+#btn3:hover {
+  background-color: #ddd;
+}
+
+#btn4 {
+  margin-top: 2px;
+  background-color: #fff;
+  color: #223;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+  align-self: flex-start;
+}
+
+#btn4:hover {
+  background-color: #ddd;
+}
+
+#btn5 {
+  margin-top: 2px;
+  background-color: #fff;
+  color: #223;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+  align-self: flex-start;
+}
+
+#btn5:hover {
+  background-color: #ddd;
+}
+
+#btn6 {
+  margin-top: 2px;
+  background-color: #fff;
+  color: #223;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+  align-self: flex-start;
+}
+
+#btn6:hover {
+  background-color: #ddd;
+}
 
 
 /*Color Use 	Hex Code	Description
