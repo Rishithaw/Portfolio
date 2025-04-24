@@ -10,7 +10,7 @@ function validate(e) {
 }
 
 function resetForm(e) {
-    if (confirm('Clear form?')) {
+    if (confirm('Made a typo?')) {
         hideAllErrors();
         document.getElementById("name").focus();
         return true;
