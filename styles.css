@@ -14,7 +14,7 @@ body {
   padding: 10px 40px;
 }
 
-.branding {
+#branding {
   display: flex;
   align-items: center;
 }
@@ -97,7 +97,7 @@ h1 {
   -webkit-text-fill-color: transparent;
 }
 
-.info {
+#info {
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -155,7 +155,7 @@ h2 span {
   gap: 30px;
 }
 
-#school {
+#school, #institute, #college {
   background-color: #2a2a2a;
   padding: 20px;
   border-radius: 20px;
@@ -165,123 +165,37 @@ h2 span {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-#school img {
+#school img, #institute img, #college img {
   max-height: 200px;
   margin-bottom: 20px;
   object-fit: cover;
 }
 
-#school h3 {
+#school h3, #institute h3, #college h3 {
   font-size: 18px;
   margin-bottom: 10px;
 }
 
-#school p {
+#school p, #institute p, #college p {
   font-size: 14px;
   color: #ccc;
   margin-bottom: 15px;
 }
 
-#school a {
+#school a, #institute a, #college a {
   text-decoration: none;
   color: #00c6ff;
   font-weight: bold;
   transition: color 0.3s;
 }
 
-#school a:hover {
-  color: #ffffff;
-}
-
-#school:hover {
+#school:hover, #institute:hover, #college:hover {
   transform: translateY(-5px);
   box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
 }
 
-#institute {
-  background-color: #2a2a2a;
-  padding: 20px;
-  border-radius: 20px;
-  width: 280px;
-  text-align: center;
-  box-shadow: 0 0 12px rgba(0, 255, 255, 0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-#institute img {
-  max-height: 200px;
-  margin-bottom: 20px;
-  object-fit: cover;
-}
-
-#institute h3 {
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-
-#institute p {
-  font-size: 14px;
-  color: #ccc;
-  margin-bottom: 15px;
-}
-
-#institute a {
-  text-decoration: none;
-  color: #00c6ff;
-  font-weight: bold;
-  transition: color 0.3s;
-}
-
-#institute a:hover {
+#school a:hover, #institute a:hover, #college a:hover {
   color: #ffffff;
-}
-
-#institute:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
-}
-
-#college {
-  background-color: #2a2a2a;
-  padding: 20px;
-  border-radius: 20px;
-  width: 280px;
-  text-align: center;
-  box-shadow: 0 0 12px rgba(0, 255, 255, 0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-#college img {
-  max-height: 200px;
-  margin-bottom: 20px;
-  object-fit: cover;
-}
-
-#college h3 {
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-
-#college p {
-  font-size: 14px;
-  color: #ccc;
-  margin-bottom: 15px;
-}
-
-#college a {
-  text-decoration: none;
-  color: #00c6ff;
-  font-weight: bold;
-  transition: color 0.3s;
-}
-
-#college a:hover {
-  color: #ffffff;
-}
-
-#college:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
 }
 
 #footer {
@@ -506,14 +420,14 @@ h2 span {
   padding: 20px 25px;
   border-radius: 15px;
   width: 270px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: left;
 }
 
 #java:hover {
   transform: translateY(-5px);
-  box-shadow: 0 12px 24px rgba(0,0,0,0.4);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
 }
 
 #java h3 {
@@ -527,20 +441,20 @@ h2 span {
   line-height: 1.5;
   color: #e0e0e0;
 }
---------
-#database {
+
+-------- #database {
   background-color: #292974;
   padding: 20px 25px;
   border-radius: 15px;
   width: 270px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: left;
 }
 
 #database:hover {
   transform: translateY(-5px);
-  box-shadow: 0 12px 24px rgba(0,0,0,0.4);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
 }
 
 #database h3 {
@@ -560,14 +474,14 @@ h2 span {
   padding: 20px 25px;
   border-radius: 15px;
   width: 270px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: left;
 }
 
 #ui-making:hover {
   transform: translateY(-5px);
-  box-shadow: 0 12px 24px rgba(0,0,0,0.4);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
 }
 
 #ui-making h3 {
@@ -587,14 +501,14 @@ h2 span {
   padding: 20px 25px;
   border-radius: 15px;
   width: 270px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: left;
 }
 
 #website:hover {
   transform: translateY(-5px);
-  box-shadow: 0 12px 24px rgba(0,0,0,0.4);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
 }
 
 #website h3 {
@@ -966,17 +880,17 @@ h2 span {
   /* margin: 0 10px; */
   display: flex;
   align-items: flex-end;
-  transition: .6s cubic-bezier(.28,-0.03,0,.99);
-  box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
+  transition: .6s cubic-bezier(.28, -0.03, 0, .99);
+  box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.8);
 }
 
-[id^="card"] > [id^="row"] {
+[id^="card"]>[id^="row"] {
   color: #a1f9f9;
   display: flex;
   flex-wrap: nowrap;
 }
 
-[id^="row"] > [id^="icon"] {
+[id^="row"]>[id^="icon"] {
   background: #223;
   color: white;
   border-radius: 50%;
@@ -987,12 +901,12 @@ h2 span {
   margin: 15px;
 }
 
-[id^="row"] > [id^="description"] {
+[id^="row"]>[id^="description"] {
   display: flex;
   justify-content: center;
   flex-direction: column;
   overflow: hidden;
-  
+
   height: 100px;
   width: 520px;
   opacity: 0;
@@ -1012,15 +926,20 @@ h2 span {
   text-transform: uppercase;
 }
 
-input {
+#c1,
+#c2,
+#c3,
+#c4,
+#c5,
+#c6 {
   display: none;
 }
 
-input:checked + label {
+input:checked+label {
   width: 600px;
 }
 
-input:checked + label [id^="description"] {
+input:checked+label [id^="description"] {
   opacity: 1 !important;
   transform: translateY(0) !important;
 }
@@ -1028,18 +947,23 @@ input:checked + label [id^="description"] {
 #card1 {
   background-image: url('images/Terminal.jpeg');
 }
+
 #card2 {
   background-image: url('images/Manage.jpeg');
 }
+
 #card3 {
   background-image: url('images/Tictactoe.jpg');
 }
+
 #card4 {
   background-image: url('images/Driving.jpg');
 }
+
 #card5 {
   background-image: url('images/Gallery.jpg');
 }
+
 #card6 {
   background-image: url('images/Portfolio.png');
 }
@@ -1062,7 +986,7 @@ input:checked + label [id^="description"] {
   background-color: #ddd;
 }
 
-#btn2{
+#btn2 {
   margin-top: 2px;
   background-color: #fff;
   color: #223;
@@ -1150,6 +1074,85 @@ input:checked + label [id^="description"] {
 
 #btn6:hover {
   background-color: #ddd;
+}
+
+#contact-body {
+  background-color: #A6A6A6;
+}
+
+/* #contact-container{
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(238, 8, 8, 0.1);
+} */
+
+/* #contact-form-section{
+  border: 2px solid black;
+} */
+
+#contact-form-section {
+  max-width: 700px;
+  margin: 60px auto;
+  padding: 40px;
+  background-color: #fefefe;
+  border-radius: 10px;
+  box-shadow: 0 0 15px #00000039;
+  font-family: Arial, sans-serif;
+}
+
+#contact-form-section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #0a0a0a;
+}
+
+form label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+  color: #333;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  font-size: 1em;
+  transition: 0.3s;
+}
+
+form input:focus,
+form textarea:focus {
+  color: #fff;
+  border-color: #444;
+  outline: none;
+}
+
+#name-error, #phone-error, #email-error {
+  color: red;
+  font-size: 0.9em;
+  margin-top: 5px;
+  display: none;
+}
+
+form button {
+  margin-top: 25px;
+  padding: 10px 25px;
+  border: none;
+  background-color: #C1875F;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: 0.3s ease;
+}
+
+form button:hover {
+  background-color: #d97f43;
 }
 
 

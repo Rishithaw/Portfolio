@@ -40,12 +40,8 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(typeTitle, deletingTitle ? 80 : 120);
     }
 
-    // Auto-update year in footer
-    let yearTag = document.getElementById("year");
-    if (yearTag) yearTag.textContent = new Date().getFullYear();
-
     // Start animations
-    nameElement.textContent = "";
+    nameElement.textContent = '';
     typeName();
     typeTitle();
 });
