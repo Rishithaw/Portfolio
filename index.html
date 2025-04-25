@@ -1,35 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rishitha Wickramasinghe</title>
+    <!--The logo that appears on the tab in the browswer -->
     <link rel="icon" href="images/icon.png" type="image/png" />
     <link rel="stylesheet" type="text/css" href="styles.css" />
 </head>
+
 <body>
     <header>
-        <div id="header">  
+        <div id="header">
             <div id="branding">
-                <img id="icon" src="images/Icon.png" alt="Logo">   
+                <img id="icon" src="images/Icon.png" alt="Logo">
                 <span>Rishitha Wickramasinghe</span>
             </div>
-            <nav aria-label="Top-navigation">    
+            <!-- navigation to each page -->
+            <nav aria-label="Top-navigation">
                 <ul id="navs" aria-label="Top-links">
                     <li><a href="index.html">About Me</a></li>
                     <li><a href="services.html">Services</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
-        </div>        
-    </header> 
+        </div>
+    </header>
     <main id="home">
         <img id="profile" src="images/Photo.jpg" alt="Photo">
         <div id="info">
+            <!--Blank due to javascript filling -->
             <h1 id="typer"></h1>
+
             <h2 id="rotating-titles">
+                <!--Blank due to javascript filling -->
                 <span id="title-typer"></span>
-            </h2> 
+            </h2>
             <p>I can help you create detail-oriented websites or full on systems for your business.
                 <br>
                 They will be user-friendly and responsive.
@@ -39,38 +46,46 @@
                 align with brand identity and user needs.
             </p>
         </div>
+
+        <!-- Section related to the edcuation -->
         <section id="education-section">
             <h2>Education</h2>
 
+            <!--Div tag containing cards -->
             <div id="education-cards">
-              <div id="school">
-                <img src="images/Lyceum.jpg" alt="Lyceum International School Logo">
-                <h3>Lyceum International School - Wattala</h3>
-                <p>Completed school education (British Curriculum).</p>
-                <a href="https://www.lyceum.lk/branches/wattala/" target="_blank">Visit Website</a>
-              </div>
-          
-              <div id="institute">
-                <img src="images/Ijse.png" alt="IJSE Logo">
-                <h3>Institute of Java & Software Engineering</h3>
-                <p>Diploma in Software Engineering and Java Programming.</p>
-                <a href="https://ijse.lk/" target="_blank">Visit Website</a>
-              </div>
-          
-              <div id="college">
-                <img src="images/RRC.png" alt="Red River College Logo">
-                <h3>Red River College Polytechnic</h3>
-                <p>Advanced Diploma in Information Technology (Canada).</p>
-                <a href="https://www.rrc.ca/" target="_blank">Visit Website</a>
-              </div>
+
+                <!-- Card1 -->
+                <div id="school">
+                    <img src="images/Lyceum.jpg" alt="Lyceum International School Logo">
+                    <h3>Lyceum International School - Wattala</h3>
+                    <p>Completed school education (British Curriculum).</p>
+                    <a href="https://www.lyceum.lk/branches/wattala/" target="_blank">Visit Website</a>
+                </div>
+
+                <!-- Card2 -->
+                <div id="institute">
+                    <img src="images/Ijse.png" alt="IJSE Logo">
+                    <h3>Institute of Java & Software Engineering</h3>
+                    <p>Diploma in Software Engineering and Java Programming.</p>
+                    <a href="https://ijse.lk/" target="_blank">Visit Website</a>
+                </div>
+
+                <!-- Card3 -->
+                <div id="college">
+                    <img src="images/RRC.png" alt="Red River College Logo">
+                    <h3>Red River College Polytechnic</h3>
+                    <p>Advanced Diploma in Information Technology (Canada).</p>
+                    <a href="https://www.rrc.ca/" target="_blank">Visit Website</a>
+                </div>
             </div>
         </section>
-          
-    </main> 
+    </main>
+
     <footer id="footer">
         <div id="content">
             <p id="copyright">&copy; 2025 Rishitha Wickramasinghe. All rights reserved.</p>
-            <nav>    
+            <!-- navigation to each page -->
+            <nav>
                 <ul id="footer-nav">
                     <li><a href="index.html">About Me</a></li>
                     <li><a href="services.html">Services</a></li>
@@ -78,24 +93,26 @@
                 </ul>
             </nav>
         </div>
+
         <p id="contact-info">
             📍Winnipeg, Canada <br>
             <a href="rishithaw1@gmail.com">rishithaw1@gmail.com</a>
         </p>
-    
+
+        <!-- Div tag containing socials. Target property opens the link in a new tab. 
+        Rel property prevents newly opened tabs from controlling the page the user came from -->
         <div id="socials">
             <a href="https://github.com/Rishithaw" target="_blank" rel="noopener noreferrer">
                 <img src="images/Github.png" alt="Github">
             </a>
-            
+
             <a href="https://www.linkedin.com/in/rishitha-wickramasinghe-93442b324/" target="_blank" rel="noopener noreferrer">
                 <img src="images/Linkedln.jpg" alt="LinkedIn">
             </a>
-            
         </div>
-        
     </footer>
 
-	<script type="text/javascript" src="index.js"></script>
+    <script type="text/javascript" src="index.js"></script>
 </body>
+
 </html>

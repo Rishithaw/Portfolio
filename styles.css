@@ -1,3 +1,4 @@
+/* Set up for the website */
 body {
   padding: 0;
   margin: 0;
@@ -6,6 +7,9 @@ body {
   background-color: #1C1C1C;
 }
 
+/* Start of Index.html styling */
+
+/* Styling the header */
 #header {
   display: flex;
   justify-content: space-between;
@@ -14,20 +18,19 @@ body {
   padding: 10px 40px;
 }
 
+/* Styling the name along with the logo */
 #branding {
   display: flex;
   align-items: center;
 }
 
+/* Styling the logo */
 #icon {
   height: 40px;
   margin-right: 10px;
 }
 
-nav {
-  position: static;
-}
-
+/* Styling the unordered list */
 ul {
   display: flex;
   list-style-type: none;
@@ -36,10 +39,12 @@ ul {
   margin: 0;
 }
 
+/* Giving padding to the list tags */
 ul li {
   padding: 0 10px;
 }
 
+/* Styling the links */
 ul li a {
   position: relative;
   color: #ffffff;
@@ -69,6 +74,7 @@ ul li a:focus::after {
   width: 100%;
 }
 
+/* Styling the span tag. Clip and text-fill property allows the gradient to be set on the text */
 span {
   font-weight: bold;
   font-size: 16px;
@@ -77,6 +83,7 @@ span {
   -webkit-text-fill-color: transparent;
 }
 
+/* Styling the main tag */
 #home {
   display: flex;
   flex-direction: column;
@@ -85,12 +92,14 @@ span {
   color: #ffffff;
 }
 
+/* Styling the image */
 #profile {
   height: 400px;
   border-radius: 50%;
   padding-top: 40px;
 }
 
+/* Styling the h1 tag */
 h1 {
   font-weight: bold;
   background: linear-gradient(90deg, #00c6ff, #0072ff);
@@ -98,6 +107,7 @@ h1 {
   -webkit-text-fill-color: transparent;
 }
 
+/* Styling the div tag containing the text */
 #info {
   display: flex;
   flex-direction: column;
@@ -105,10 +115,10 @@ h1 {
   font-size: 20px;
 }
 
+/* Styling the h1 tag that holds the name */
 #typer {
   min-height: 50px;
-  color: transparent;
-  /* Prevents flicker before JS types */
+  color: transparent; /* Prevents flicker before JS types */
   font-weight: bold;
   background: linear-gradient(90deg, #00c6ff, #0072ff);
   background-clip: text;
@@ -121,19 +131,22 @@ h1 {
   margin: 0 auto;
 }
 
+/* Styling the h2 tag that contains the span tag */
 #rotating-titles {
   position: relative;
-  height: 32px;
+  height: 34px;
   overflow: hidden;
   text-align: center;
   margin-top: 10px;
   margin-bottom: 0;
 }
 
+/* Setting the font size for the text in the span tag */
 h2 span {
   font-size: 20px;
 }
 
+/* Styling the section tag */
 #education-section {
   padding: 60px 20px;
   text-align: center;
@@ -141,6 +154,7 @@ h2 span {
   color: white;
 }
 
+/* Styling the h2 tag in the section tag */
 #education-section h2 {
   font-size: 32px;
   margin-bottom: 40px;
@@ -149,6 +163,7 @@ h2 span {
   -webkit-text-fill-color: transparent;
 }
 
+/* Styling the div tag that contains the cards */
 #education-cards {
   display: flex;
   flex-wrap: wrap;
@@ -156,6 +171,7 @@ h2 span {
   gap: 30px;
 }
 
+/* Styling the cards */
 #school,
 #institute,
 #college {
@@ -168,6 +184,7 @@ h2 span {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Styling the image in the cards */
 #school img,
 #institute img,
 #college img {
@@ -176,6 +193,7 @@ h2 span {
   object-fit: cover;
 }
 
+/* Styling the h3 tag in the cards */
 #school h3,
 #institute h3,
 #college h3 {
@@ -183,6 +201,7 @@ h2 span {
   margin-bottom: 10px;
 }
 
+/* Styling the p tag in the cards */
 #school p,
 #institute p,
 #college p {
@@ -191,6 +210,7 @@ h2 span {
   margin-bottom: 15px;
 }
 
+/* Styling the a tag in the cards */
 #school a,
 #institute a, 
 #college a {
@@ -200,19 +220,22 @@ h2 span {
   transition: color 0.3s;
 }
 
+/* Adding a hover effect to the cards */
 #school:hover,
 #institute:hover,
 #college:hover {
-  transform: translateY(-5px);
+  transform: translateY(-5px); /* Moves the card */
   box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
 }
 
+/* Adding a hover effect to the a tag in the cards */
 #school a:hover,
 #institute a:hover,
 #college a:hover {
   color: #ffffff;
 }
 
+/* Styling the footer*/
 #footer {
   background-color: #111;
   color: #aaa;
@@ -222,11 +245,13 @@ h2 span {
   font-size: 12px
 }
 
+/* Styling the copyrights line */
 #copyright {
   margin-bottom: 10px;
   font-size: 12px;
 }
 
+/* Styling the footer navigation */
 #footer-nav {
   display: flex;
   justify-content: center;
@@ -236,6 +261,7 @@ h2 span {
   gap: 15px;
 }
 
+/* Styling the links in the footer navigation */
 #footer-nav li a {
   color: #888;
   font-size: 10px;
@@ -243,6 +269,7 @@ h2 span {
   transition: color 0.3s;
 }
 
+/* Styling the p tag */
 #contact-info {
   margin: 15px 0;
   font-size: 12px;
@@ -250,11 +277,13 @@ h2 span {
   z-index: 10;
 }
 
+/* Styling the link in the tag */
 #contact-info a {
   color: #00c6ff;
   text-decoration: none;
 }
 
+/* Adding a hover effect to the link */
 #contact-info a:hover {
   text-decoration: underline;
 }
@@ -263,11 +292,13 @@ h2 span {
   margin-top: 10px;
 }
 
+/* Removing the link decoration from the links */
 #socials a {
   text-decoration: none;
   outline: none;
 }
 
+/* Styling the image tag and adding a transition  */
 #socials a img {
   width: 30px;
   height: 30px;
@@ -276,12 +307,16 @@ h2 span {
   transition: filter 0.3s;
 }
 
+/* Adding a hover effect to the images */
 #socials a:hover img {
   filter: grayscale(0%) brightness(1.5);
 }
 
-/*Services*/
+/* End of Index.html styling */
 
+/* Start of services.html styling */
+
+/* Styling the main tag */
 #tools {
   padding: 20px 20px 20px;
   text-align: center;
@@ -289,6 +324,7 @@ h2 span {
   color: #ffffff;
 }
 
+/* Styling the h2 tag */
 #tools h2 {
   font-size: 28px;
   margin-bottom: 30px;
@@ -297,6 +333,7 @@ h2 span {
   -webkit-text-fill-color: transparent;
 }
 
+/* Styling the div tag that has the images and p tag*/
 #tools-icons {
   display: flex;
   justify-content: center;
@@ -305,6 +342,7 @@ h2 span {
   flex-wrap: wrap;
 }
 
+/* Styling each div tag */
 #vscode,
 #drawio,
 #figma,
@@ -315,6 +353,7 @@ h2 span {
   transition: transform 0.3s ease;
 }
 
+/* Styling each image in the div tag */
 #vscode img,
 #drawio img,
 #figma img,
@@ -325,6 +364,7 @@ h2 span {
   margin-bottom: 10px;
 }
 
+/* Adding a hover effect to each div tag */
 #vscode:hover,
 #drawio:hover,
 #figma:hover,
@@ -332,6 +372,7 @@ h2 span {
   transform: translateY(-5px);
 }
 
+/* Styling the p tag */
 #vscode p,
 #drawio p,
 #figma p,
@@ -341,7 +382,7 @@ h2 span {
   margin: 0;
 }
 
-/* What I Can Do For You Section */
+/* Styling the section tag containing the services */
 #services-overview {
   padding: 50px 20px;
   background-color: #A6A6A6;
@@ -350,6 +391,7 @@ h2 span {
   text-align: center;
 }
 
+/* Styling the h2 tag */
 #services-overview h2 {
   font-size: 2em;
   margin-bottom: 10px;
@@ -357,6 +399,7 @@ h2 span {
   text-shadow: 1px 1px 4px #000;
 }
 
+/* Styling the div tag that has the services */
 #services-list {
   display: flex;
   flex-wrap: wrap;
@@ -366,6 +409,7 @@ h2 span {
   margin: 0 auto;
 }
 
+/* Styling the section tag that holds the cards */
 #tech-stack {
   padding: 60px 20px;
   text-align: center;
@@ -373,6 +417,7 @@ h2 span {
   color: white;
 }
 
+/* Styling the h2 tag */
 #tech-stack h2 {
   font-size: 32px;
   margin-bottom: 40px;
@@ -381,6 +426,7 @@ h2 span {
   -webkit-text-fill-color: transparent;
 }
 
+/* Styling the div tag that holds the cards */
 #tech-cards {
   display: flex;
   flex-wrap: wrap;
@@ -388,7 +434,7 @@ h2 span {
   gap: 30px;
 }
 
-/*=====*/
+/* Styling the cards */
 #java-card,
 #mysql-card,
 #javafx-card,
@@ -405,6 +451,7 @@ h2 span {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Styling the image in the cards */
 #java-card img,
 #mysql-card img,
 #javafx-card img,
@@ -417,6 +464,7 @@ h2 span {
   object-fit: cover;
 }
 
+/* Styling the h3 tag in the cards */
 #java-card h3,
 #javafx-card h3,
 #postgresql-card h3,
@@ -427,6 +475,7 @@ h2 span {
   margin-bottom: 10px;
 }
 
+/* Styling the p tag in the cards */
 #java-card p,
 #mysql-card p,
 #javafx-card p,
@@ -439,6 +488,7 @@ h2 span {
   margin-bottom: 15px;
 }
 
+/* Styling the a tag in the cards */
 #java-card a,
 #mysql-card a,
 #javafx-card a,
@@ -452,6 +502,7 @@ h2 span {
   transition: color 0.3s;
 }
 
+/* Adding a hover effect to the cards */
 #java-card a:hover,
 #mysql-card a:hover,
 #javafx-card a:hover,
@@ -462,6 +513,7 @@ h2 span {
   color: #ffffff;
 }
 
+/* Adding a hover effect to the a tag in the cards */
 #java-card:hover,
 #mysql-card:hover,
 #javafx-card:hover,
@@ -473,6 +525,7 @@ h2 span {
   box-shadow: 0 0 20px #00ffff33;
 }
 
+/* Styling the h3 tag in the mysql card */
 #mysql-card h3 {
   font-size: 18px;
   margin-top: 34px;
@@ -495,30 +548,32 @@ h2 span {
   justify-content: start;
 }
 
+/* Styling all the elements where ID starts with "card" */
 [id^="card"] {
   width: 80px;
   border-radius: .75rem;
-  background-size: cover;
-  cursor: pointer;
-  overflow: hidden;
+  background-size: cover; /* Make background image cover the card */
+  cursor: pointer; /* Cursor changes to pointer on hover */
+  overflow: hidden; /* Hide overflow content */
   border-radius: 2rem;
-  /* margin: 0 10px; */
   display: flex;
   align-items: flex-end;
-  transition: .6s cubic-bezier(.28, -0.03, 0, .99);
+  transition: .6s cubic-bezier(.28, -0.03, 0, .99); /* Smooth transition effect */
   box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.8);
 }
 
+/* Styling the row container inside each card */
 [id^="card"]>[id^="row"] {
   color: #a1f9f9;
   display: flex;
   flex-wrap: nowrap;
 }
 
+/* Styling each icon inside each row */
 [id^="row"]>[id^="icon"] {
   background: #223;
   color: white;
-  border-radius: 50%;
+  border-radius: 50%; /* Circle shape.(Is oval) */
   width: 50px;
   display: flex;
   justify-content: center;
@@ -526,79 +581,58 @@ h2 span {
   margin: 15px;
 }
 
+/* Styling the description section inside each card */
 [id^="row"]>[id^="description"] {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  overflow: hidden;
-
-  height: 100px;
-  width: 520px;
-  opacity: 0;
+  overflow: hidden; /* Hide overflow content */
+  height: 100px; /* Image height */
+  width: 520px; /* Full description width when expanded */
+  opacity: 0; /* Hidden by default */
   transform: translateY(30px);
   transition-delay: .3s;
-  transition: all .3s ease;
+  transition: all .3s ease;  /* Smooth animation */
 }
 
+/* Styling the p tag inside the description */
 [id^="description"] p {
   color: #6a6a6a;
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px); /* Blurring the background behind text */
   margin: 0;
 }
 
+/* Styling the headings inside the description */
 [id^="description"] h4 {
   margin: 0;
-  text-transform: uppercase;
 }
 
-#c1,
-#c2,
-#c3,
-#c4,
-#c5,
-#c6 {
+/* Hide all radio buttons (used for selecting cards) */
+#c1, #c2, #c3, #c4, #c5, #c6 {
   display: none;
 }
 
+/* Styling to when a radio button is checked, expand the respective card */
 input:checked+label {
   width: 600px;
 }
 
+/* Styling to show the description when the card is selected */
 input:checked+label [id^="description"] {
-  opacity: 1 !important;
-  transform: translateY(0) !important;
+  opacity: 1 !important; /* Make it visible */  
+  transform: translateY(0) !important; /* Reset position */
 }
 
-#card1 {
-  background-image: url('images/Terminal.jpeg');
-}
+/* Background images for each individual card */
+#card1 { background-image: url('images/Terminal.jpeg'); }
+#card2 { background-image: url('images/Manage.jpeg'); }
+#card3 { background-image: url('images/Tictactoe.jpg'); }
+#card4 { background-image: url('images/Driving.jpg'); }
+#card5 { background-image: url('images/Gallery.jpg'); }
+#card6 { background-image: url('images/Portfolio.png'); }
 
-#card2 {
-  background-image: url('images/Manage.jpeg');
-}
-
-#card3 {
-  background-image: url('images/Tictactoe.jpg');
-}
-
-#card4 {
-  background-image: url('images/Driving.jpg');
-}
-
-#card5 {
-  background-image: url('images/Gallery.jpg');
-}
-
-#card6 {
-  background-image: url('images/Portfolio.png');
-}
-
-#btn1,
-#btn2,
-#btn3,
-#btn4,
-#btn5,
-#btn6 {
+/* Style for the source code buttons in each card */
+#btn1, #btn2, #btn3, #btn4, #btn5, #btn6 {
   margin-top: 2px;
   background-color: #fff;
   color: #223;
@@ -608,23 +642,25 @@ input:checked+label [id^="description"] {
   text-decoration: none;
   font-weight: bold;
   font-size: 0.9rem;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease; /* Smooth hover effect */
   align-self: flex-start;
 }
 
-#btn1:hover,
-#btn2:hover,
-#btn3:hover,
-#btn4:hover,
-#btn5:hover,
-#btn6:hover {
+/* Button hover effect */
+#btn1:hover, #btn2:hover, #btn3:hover, #btn4:hover, #btn5:hover, #btn6:hover {
   background-color: #ddd;
 }
 
+/* End of services.html styling */
+
+/* Start of services.html styling */
+
+/* Setting background color for the contact page */
 #contact-body {
-  background-color: #A6A6A6;
+  background-color: #939191;
 }
 
+/* Styling for the main contact form container */
 #contact-form-section {
   max-width: 700px;
   margin: 60px auto;
@@ -632,15 +668,17 @@ input:checked+label [id^="description"] {
   background-color: #fefefe;
   border-radius: 10px;
   box-shadow: 0 0 15px #00000039;
-  font-family: Arial, sans-serif;
+  font-family: Arial, sans-serif; /* Changing the font */
 }
 
+/* Styling the section heading */
 #contact-form-section h2 {
   text-align: center;
   margin-bottom: 30px;
   color: #0a0a0a;
 }
 
+/* Styling all the form labels */
 form label {
   display: block;
   margin-top: 15px;
@@ -648,6 +686,7 @@ form label {
   color: #333;
 }
 
+/* Styling for inputs and textareas */
 form input,
 form textarea {
   width: 100%;
@@ -656,23 +695,27 @@ form textarea {
   border: 2px solid #ccc;
   border-radius: 6px;
   font-size: 1em;
-  transition: 0.3s;
+  transition: 0.3s; /* Smooth focus transitions */
 }
 
+/* Highlighting the input/textarea when focused */
 form input:focus,
 form textarea:focus {
-  color: #fff;
   border-color: #444;
   outline: none;
 }
 
-#name-error, #phone-error, #email-error {
+/* Styling the error message */
+#name-error,
+#phone-error,
+#email-error {
   color: red;
   font-size: 0.9em;
   margin-top: 5px;
   display: none;
 }
 
+/* Styling the submit and reset buttons */
 form button {
   margin-top: 25px;
   padding: 10px 25px;
@@ -686,43 +729,49 @@ form button {
   transition: 0.3s ease;
 }
 
+/* Adding a hover effect */
 form button:hover {
   background-color: #d97f43;
 }
 
 @media (max-width: 768px) {
-  /* General Layout Adjustments */
   body {
     font-size: 14px;
   }
 
+  /* Stacks header items vertically and align to start */
   #header {
     flex-direction: column;
     align-items: flex-start;
     padding: 10px 20px;
   }
 
+  /* Stacks nav links vertically and remove left padding */
   nav ul {
     flex-direction: column;
     align-items: flex-start;
     padding-left: 0;
   }
 
+  /* Adds spacing between stacked nav items */
   nav ul li {
     padding: 5px 0;
   }
 
+  /* Adjusting the profile image */
   #profile {
     width: 70%;
     height: auto;
     padding-top: 20px;
   }
 
+  /* Adjusting the  font size and the padding in info section */
   #info {
     font-size: 16px;
     padding: 0 15px;
   }
 
+  /* Stacks the cards and icon groups vertically and center them */
   #education-cards,
   #tech-cards,
   #services-list,
@@ -731,6 +780,7 @@ form button:hover {
     align-items: center;
   }
 
+  /* Sets individual card widths to near full size */
   #school,
   #institute,
   #college,
@@ -748,6 +798,7 @@ form button:hover {
     width: 90%;
   }
 
+  /* Reduces font size for section headings */
   #tools h2,
   #tech-stack h2,
   #education-section h2,
@@ -755,12 +806,14 @@ form button:hover {
     font-size: 24px;
   }
 
+  /* Adjusts projects section height and layout */
   #projects {
     height: auto;
     padding: 20px 0;
     flex-direction: column;
   }
 
+  /* Allows wrapping of the project slides and adjusts spacing */
   #project-slides {
     flex-wrap: wrap;
     gap: 15px;
@@ -768,36 +821,32 @@ form button:hover {
     height: auto;
   }
 
+  /* Makes project cards full-width and adjusts height */
   [id^="card"] {
     width: 100%;
     height: auto;
   }
 
+  /* Allows description containers to expand */
   [id^="description"] {
     width: auto;
   }
 
+  /* Shrinks footer font and adjusts padding */
   #footer {
     font-size: 10px;
     padding: 20px 10px;
   }
 
+  /* Stacks footer nav items vertically with spacing */
   #footer-nav {
     flex-direction: column;
     gap: 8px;
   }
 
+  /* Resizes social media icons */
   #socials a img {
     width: 24px;
     height: 24px;
   }
 }
-
-
-
-/*Color Use 	Hex Code	Description
-Primary Red	    #E10600	    Vibrant red from the wall
-Charcoal Black	#1C1C1C	    Deep black from the pattern
-Concrete Gray	#A6A6A6	    Cool gray from the wall
-White	        #FFFFFF	    For text/background balance
-Accent Tan	    #C1875F	    From the watch (subtle accent)*/
