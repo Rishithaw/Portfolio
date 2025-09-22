@@ -329,10 +329,7 @@ h2 span {
 }
 
 /* Styling each div tag */
-#vscode,
-#drawio,
-#figma,
-#scenebuilder {
+.apps {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -340,10 +337,7 @@ h2 span {
 }
 
 /* Styling each image in the div tag */
-#vscode img,
-#drawio img,
-#figma img,
-#scenebuilder img {
+.apps img {
   width: 60px;
   height: 60px;
   object-fit: contain;
@@ -351,18 +345,12 @@ h2 span {
 }
 
 /* Adding a hover effect to each div tag */
-#vscode:hover,
-#drawio:hover,
-#figma:hover,
-#scenebuilder:hover {
+.apps:hover {
   transform: translateY(-5px);
 }
 
 /* Styling the p tag */
-#vscode p,
-#drawio p,
-#figma p,
-#scenebuilder p {
+.apps p {
   font-size: 14px;
   color: #ccc;
   margin: 0;
