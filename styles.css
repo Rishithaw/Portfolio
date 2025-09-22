@@ -409,13 +409,7 @@ h2 span {
 }
 
 /* Styling the cards */
-#java-card,
-#mysql-card,
-#javafx-card,
-#postgresql-card,
-#html-card,
-#css-card,
-#javascript-card {
+.card {
   background-color: #2a2a2a;
   padding: 20px;
   border-radius: 20px;
@@ -426,50 +420,27 @@ h2 span {
 }
 
 /* Styling the image in the cards */
-#java-card img,
-#mysql-card img,
-#javafx-card img,
-#postgresql-card img,
-#html-card img,
-#css-card img,
-#javascript-card img {
+.card img {
   max-height: 200px;
   margin-bottom: 20px;
   object-fit: cover;
 }
 
 /* Styling the h3 tag in the cards */
-#java-card h3,
-#javafx-card h3,
-#postgresql-card h3,
-#html-card h3,
-#css-card h3,
-#javascript-card h3 {
+.card h3 {
   font-size: 18px;
   margin-bottom: 10px;
 }
 
 /* Styling the p tag in the cards */
-#java-card p,
-#mysql-card p,
-#javafx-card p,
-#postgresql-card p,
-#html-card p,
-#css-card p,
-#javascript-card p {
+.card p {
   font-size: 14px;
   color: #ccc;
   margin-bottom: 15px;
 }
 
 /* Styling the a tag in the cards */
-#java-card a,
-#mysql-card a,
-#javafx-card a,
-#postgresql-card a,
-#html-card a,
-#css-card a,
-#javascript-card a {
+.card a {
   text-decoration: none;
   color: #00c6ff;
   font-weight: bold;
@@ -477,24 +448,12 @@ h2 span {
 }
 
 /* Adding a hover effect to the cards */
-#java-card a:hover,
-#mysql-card a:hover,
-#javafx-card a:hover,
-#postgresql-card a:hover,
-#html-card a:hover,
-#css-card a:hover,
-#javascript-card a:hover {
+.card:hover {
   color: #ffffff;
 }
 
 /* Adding a hover effect to the a tag in the cards */
-#java-card:hover,
-#mysql-card:hover,
-#javafx-card:hover,
-#postgresql-card:hover,
-#html-card:hover,
-#css-card:hover,
-#javascript-card:hover {
+.card:hover {
   transform: translateY(-5px);
   box-shadow: 0 0 20px #00ffff33;
 }
@@ -755,20 +714,9 @@ form button:hover {
   }
 
   /* Sets individual card widths to near full size */
-  #school,
-  #institute,
-  #college,
-  #java-card,
-  #mysql-card,
-  #javafx-card,
-  #postgresql-card,
-  #html-card,
-  #css-card,
-  #javascript-card,
-  #java,
-  #database,
-  #ui-making,
-  #website {
+  .edu-card,
+  .card,
+  .services {
     width: 90%;
   }
 
