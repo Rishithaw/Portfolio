@@ -172,9 +172,7 @@ h2 span {
 }
 
 /* Styling the cards */
-#school,
-#institute,
-#college {
+.edu-card {
   background-color: #2a2a2a;
   padding: 20px;
   border-radius: 20px;
@@ -185,35 +183,27 @@ h2 span {
 }
 
 /* Styling the image in the cards */
-#school img,
-#institute img,
-#college img {
+.edu-card{
   max-height: 200px;
   margin-bottom: 20px;
   object-fit: cover;
 }
 
 /* Styling the h3 tag in the cards */
-#school h3,
-#institute h3,
-#college h3 {
+.edu-card h3 {
   font-size: 18px;
   margin-bottom: 10px;
 }
 
 /* Styling the p tag in the cards */
-#school p,
-#institute p,
-#college p {
+.edu-card p {
   font-size: 14px;
   color: #ccc;
   margin-bottom: 15px;
 }
 
 /* Styling the a tag in the cards */
-#school a,
-#institute a, 
-#college a {
+.edu-card a {
   text-decoration: none;
   color: #00c6ff;
   font-weight: bold;
@@ -221,17 +211,13 @@ h2 span {
 }
 
 /* Adding a hover effect to the cards */
-#school:hover,
-#institute:hover,
-#college:hover {
+.edu-card:hover {
   transform: translateY(-5px); /* Moves the card */
   box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
 }
 
 /* Adding a hover effect to the a tag in the cards */
-#school a:hover,
-#institute a:hover,
-#college a:hover {
+.edu-card a:hover {
   color: #ffffff;
 }
 
@@ -619,7 +605,7 @@ input:checked+label {
 
 /* Styling to show the description when the card is selected */
 input:checked+label [id^="description"] {
-  opacity: 1 !important; /* Make it visible */  
+  opacity: 1 !important; /* Make it visible */
   transform: translateY(0) !important; /* Reset position */
 }
 
