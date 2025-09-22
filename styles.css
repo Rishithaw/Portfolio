@@ -183,7 +183,7 @@ h2 span {
 }
 
 /* Styling the image in the cards */
-.edu-card{
+.edu-card img {
   max-height: 200px;
   margin-bottom: 20px;
   object-fit: cover;
@@ -541,7 +541,7 @@ h2 span {
 }
 
 /* Hide all radio buttons (used for selecting cards) */
-#c1, #c2, #c3, #c4, #c5, #c6 {
+#c1, #c2, #c3, #c4, #c5, #c6, #c7 {
   display: none;
 }
 
@@ -563,9 +563,10 @@ input:checked+label [id^="description"] {
 #card4 { background-image: url('images/Driving.jpg'); }
 #card5 { background-image: url('images/Gallery.jpg'); }
 #card6 { background-image: url('images/Portfolio.png'); }
+#card7 { background-image: url('images/Blog.png'); }
 
 /* Style for the source code buttons in each card */
-#btn1, #btn2, #btn3, #btn4, #btn5, #btn6 {
+#btn1, #btn2, #btn3, #btn4, #btn5, #btn6, #btn7 {
   margin-top: 2px;
   background-color: #fff;
   color: #223;
@@ -580,7 +581,7 @@ input:checked+label [id^="description"] {
 }
 
 /* Button hover effect */
-#btn1:hover, #btn2:hover, #btn3:hover, #btn4:hover, #btn5:hover, #btn6:hover {
+#btn1:hover, #btn2:hover, #btn3:hover, #btn4:hover, #btn5:hover, #btn6:hover, #btn7:hover {
   background-color: #ddd;
 }
 
