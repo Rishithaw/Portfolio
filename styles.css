@@ -413,7 +413,7 @@ h2 span {
   background-color: #2a2a2a;
   padding: 20px;
   border-radius: 20px;
-  width: 280px;
+  width: 200px;
   text-align: center;
   box-shadow: 0 0 12px rgba(0, 255, 255, 0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -421,20 +421,20 @@ h2 span {
 
 /* Styling the image in the cards */
 .card img {
-  max-height: 200px;
+  max-height: 120px;
   margin-bottom: 20px;
   object-fit: cover;
 }
 
 /* Styling the h3 tag in the cards */
 .card h3 {
-  font-size: 18px;
+  font-size: 16px;
   margin-bottom: 10px;
 }
 
 /* Styling the p tag in the cards */
 .card p {
-  font-size: 14px;
+  font-size: 12px;
   color: #ccc;
   margin-bottom: 15px;
 }
@@ -492,7 +492,7 @@ h2 span {
   display: flex;
   align-items: flex-end;
   transition: .6s cubic-bezier(.28, -0.03, 0, .99); /* Smooth transition effect */
-  box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.8);
+  box-shadow: 0px 10px 30px -5px #000000cc;
 }
 
 /* Styling the row container inside each card */
@@ -530,6 +530,7 @@ h2 span {
 
 /* Styling the p tag inside the description */
 [id^="description"] p {
+  text-shadow: 1px 1px #000;
   color: #6a6a6a;
   backdrop-filter: blur(8px); /* Blurring the background behind text */
   margin: 0;
@@ -541,7 +542,7 @@ h2 span {
 }
 
 /* Hide all radio buttons (used for selecting cards) */
-#c1, #c2, #c3, #c4, #c5, #c6, #c7 {
+#c1, #c2, #c3, #c4, #c5, #c6, #c7, #c8 {
   display: none;
 }
 
@@ -563,10 +564,11 @@ input:checked+label [id^="description"] {
 #card4 { background-image: url('images/Driving.jpg'); }
 #card5 { background-image: url('images/Gallery.jpg'); }
 #card6 { background-image: url('images/Portfolio.png'); }
-#card7 { background-image: url('images/Blog.png'); }
+#card7 { background-image: url('images/Movie.jpg'); }
+#card8 { background-image: url('images/Blog.png'); }
 
 /* Style for the source code buttons in each card */
-#btn1, #btn2, #btn3, #btn4, #btn5, #btn6, #btn7 {
+#btn1, #btn2, #btn3, #btn4, #btn5, #btn6, #btn7, #btn8 {
   margin-top: 2px;
   background-color: #fff;
   color: #223;
