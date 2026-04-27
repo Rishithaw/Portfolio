@@ -313,8 +313,7 @@ h1 {
   margin-top: 18px;
 }
 
-.details-link,
-.source-link {
+.project-card-actions a {
   border-radius: 999px;
   display: inline-block;
   font-size: 13px;
@@ -322,10 +321,13 @@ h1 {
   transition: transform var(--transition-base), box-shadow var(--transition-base), background-color var(--transition-base), color var(--transition-base);
 }
 
-.details-link {
-  background: var(--gradient-accent);
-  box-shadow: 0 0 14px #00c6ff33;
+.project-card-actions .details-link {
+  background: var(--gradient-accent) !important;
+  border: 1px solid var(--accent);
+  box-shadow: 0 0 18px #00c6ff66;
   color: var(--text) !important;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
 }
 
 .details-link::after,
@@ -333,14 +335,21 @@ h1 {
   content: " →";
 }
 
-.details-link:hover,
-.details-link:focus {
-  box-shadow: 0 0 20px #00c6ff66;
+.project-card-actions .details-link:hover,
+.project-card-actions .details-link:focus {
+  box-shadow: 0 0 24px #00c6ff99;
   transform: translateY(-2px);
 }
 
-.source-link {
+.project-card-actions .source-link {
+  background-color: transparent;
   border: 1px solid var(--accent-soft);
+  color: var(--accent);
+}
+
+.project-card-actions .source-link:hover,
+.project-card-actions .source-link:focus {
+  background-color: var(--accent-tint);
 }
 
 #about-me,
