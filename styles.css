@@ -890,6 +890,20 @@ form textarea:focus {
   display: none;
 }
 
+#form-status {
+  border-radius: 8px;
+  font-weight: bold;
+  margin: 20px 0 0;
+  padding: 0;
+}
+
+#form-status.success {
+  background-color: #e7f9ef;
+  border: 1px solid #2fbf71;
+  color: #17653b;
+  padding: 12px;
+}
+
 /* Styling the submit and reset buttons */
 form button {
   margin-top: 25px;
@@ -908,6 +922,52 @@ form button {
 form button:hover {
   background-color: #0072ff;
 }
+
+/* Start of 404.html styling */
+.not-found-main {
+  align-items: center;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  min-height: 70vh;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.not-found-card {
+  background-color: #242424;
+  border: 1px solid #00c6ff33;
+  border-radius: 24px;
+  box-shadow: 0 0 24px rgba(0, 198, 255, 0.12);
+  max-width: 680px;
+  padding: 44px;
+}
+
+.not-found-card h1 {
+  font-size: clamp(56px, 12vw, 110px);
+  margin: 0;
+}
+
+.not-found-card h2 {
+  font-size: 30px;
+  margin: 10px 0;
+}
+
+.not-found-card p {
+  color: #ddd;
+  line-height: 1.7;
+  margin: 0 auto 24px;
+  max-width: 540px;
+}
+
+.not-found-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+
+/* End of 404.html styling */
 
 @media (max-width: 768px) {
   body {
@@ -957,6 +1017,15 @@ form button:hover {
     text-align: center;
     width: 100%;
     max-width: 260px;
+  }
+
+  .not-found-card {
+    padding: 32px 24px;
+  }
+
+  .not-found-actions {
+    align-items: center;
+    flex-direction: column;
   }
 
   .about-content,

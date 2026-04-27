@@ -2,6 +2,7 @@
 function validate(e) {
     // Hide all error messages before validating
     hideAllErrors();
+    clearFormStatus();
 
     // Check for any input errors
     if (formHasErrors()) {
@@ -10,8 +11,11 @@ function validate(e) {
         return false;
     }
 
-    // Allow the form to submit if no errors
-    return true;
+    e.preventDefault();
+    showFormStatus("Thanks for reaching out. Your details are ready to send, and I will follow up as soon as possible.");
+    e.target.reset();
+    document.getElementById("name").focus();
+    return false;
 }
 
 // Handles form reset action
@@ -19,6 +23,7 @@ function resetForm(e) {
     // Confirm if the user really wants to reset the form
     if (confirm('Made a typo?')) {
         hideAllErrors(); // Clear any error messages
+        clearFormStatus();
         document.getElementById("name").focus(); // Set focus back to the first field
         return true;
     }
@@ -121,6 +126,25 @@ function showError(fieldId) {
 function hideError(fieldId) {
     document.getElementById(fieldId + "-error").style.display = "none";
     document.getElementById(fieldId).setAttribute("aria-invalid", "false");
+}
+
+// Shows a confirmation message after successful validation
+function showFormStatus(message) {
+    let statusMessage = document.getElementById("form-status");
+    statusMessage.textContent = message;
+    statusMessage.classList.add("success");
+}
+
+// Clears any previous form status message
+function clearFormStatus() {
+    let statusMessage = document.getElementById("form-status");
+
+    if (!statusMessage) {
+        return;
+    }
+
+    statusMessage.textContent = "";
+    statusMessage.classList.remove("success");
 }
 
 // Load event listener to attach form handlers once the page is ready

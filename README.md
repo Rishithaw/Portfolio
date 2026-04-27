@@ -11,6 +11,7 @@ A personal portfolio website for Rishitha Wickramasinghe. The site highlights ed
 - `index.html` - About Me, introduction, skills, featured projects, and education cards.
 - `services.html` - Tools, services, tech stack, and project showcase.
 - `contact.html` - Contact form with client-side validation.
+- `404.html` - Custom not-found page for invalid routes.
 
 ## Technologies Used
 
@@ -29,6 +30,8 @@ A personal portfolio website for Rishitha Wickramasinghe. The site highlights ed
 - Education and technology cards.
 - Interactive project showcase.
 - Contact form validation for name, phone number, and email.
+- On-page contact form confirmation after successful validation.
+- Custom 404 page for a smoother deployed experience.
 - External links to project repositories and technology resources.
 
 ## Project Structure
@@ -37,6 +40,7 @@ A personal portfolio website for Rishitha Wickramasinghe. The site highlights ed
 .
 ├── contact.html
 ├── contact.js
+├── 404.html
 ├── images/
 ├── index.html
 ├── index.js
