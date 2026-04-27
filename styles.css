@@ -1,8 +1,13 @@
 /* Set up for the website */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   background-color: #1C1C1C;
 }
@@ -31,7 +36,8 @@ body {
 }
 
 /* Styling the unordered list */
-ul {
+.nav-list,
+.footer-nav {
   display: flex;
   list-style-type: none;
   justify-content: center;
@@ -40,12 +46,14 @@ ul {
 }
 
 /* Giving padding to the list tags */
-ul li {
+.nav-list li,
+.footer-nav li {
   padding: 0 10px;
 }
 
 /* Styling the links */
-ul li a {
+.nav-link,
+.footer-nav a {
   position: relative;
   color: #ffffff;
   text-shadow: 1px 1px #000;
@@ -57,7 +65,8 @@ ul li a {
 }
 
 /* Underline effect */
-ul li a::after {
+.nav-link::after,
+.footer-nav a::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -69,13 +78,15 @@ ul li a::after {
   transition: width 0.3s ease-in-out;
 }
 
-ul li a:hover::after,
-ul li a:focus::after {
+.nav-link:hover::after,
+.nav-link:focus::after,
+.footer-nav a:hover::after,
+.footer-nav a:focus::after {
   width: 100%;
 }
 
 /* Styling the span tag. Clip and text-fill property allows the gradient to be set on the text */
-span {
+.brand-name {
   font-weight: bold;
   font-size: 16px;
   background: linear-gradient(90deg, #00c6ff, #0072ff);
@@ -142,7 +153,7 @@ h1 {
 }
 
 /* Setting the font size for the text in the span tag */
-h2 span {
+#title-typer {
   font-size: 20px;
 }
 
@@ -238,7 +249,7 @@ h2 span {
 }
 
 /* Styling the footer navigation */
-#footer-nav {
+.footer-nav {
   display: flex;
   justify-content: center;
   list-style: none;
@@ -248,7 +259,7 @@ h2 span {
 }
 
 /* Styling the links in the footer navigation */
-#footer-nav li a {
+.footer-nav li a {
   color: #888;
   font-size: 10px;
   text-decoration: none;
@@ -467,25 +478,29 @@ h2 span {
 
 #projects {
   width: 100%;
-  height: 60vh;
+  min-height: 60vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow-x: hidden;
 }
 
 #project-slides {
   gap: 20px;
-  height: 400px;
+  min-height: 400px;
   display: flex;
   flex-wrap: nowrap;
-  justify-content: start;
+  justify-content: flex-start;
+  max-width: 100%;
 }
 
-/* Styling all the elements where ID starts with "card" */
-[id^="card"] {
-  width: 80px;
+/* Styling the project cards */
+.project-card {
+  width: clamp(70px, 8vw, 90px);
+  min-height: 400px;
   border-radius: .75rem;
   background-size: cover; /* Make background image cover the card */
+  background-position: center;
   cursor: pointer; /* Cursor changes to pointer on hover */
   overflow: hidden; /* Hide overflow content */
   border-radius: 2rem;
@@ -496,7 +511,7 @@ h2 span {
 }
 
 /* Styling the row container inside each card */
-[id^="card"]>[id^="row"] {
+.project-row {
   color: #a1f9f9;
   text-shadow: 1px 1px #000;
   display: flex;
@@ -504,7 +519,7 @@ h2 span {
 }
 
 /* Styling each icon inside each row */
-[id^="row"]>[id^="icon"] {
+.project-icon {
   background: #223;
   color: white;
   border-radius: 50%; /* Circle shape.(Is oval) */
@@ -516,13 +531,13 @@ h2 span {
 }
 
 /* Styling the description section inside each card */
-[id^="row"]>[id^="description"] {
+.project-description {
   display: flex;
   justify-content: center;
   flex-direction: column;
   overflow: hidden; /* Hide overflow content */
   height: 100px; /* Image height */
-  width: 520px; /* Full description width when expanded */
+  width: min(520px, 65vw); /* Full description width when expanded */
   opacity: 0; /* Hidden by default */
   transform: translateY(30px);
   transition-delay: .3s;
@@ -530,7 +545,7 @@ h2 span {
 }
 
 /* Styling the p tag inside the description */
-[id^="description"] p {
+.project-description p {
   text-shadow: 1px 1px #000;
   color: #6a6a6a;
   backdrop-filter: blur(8px); /* Blurring the background behind text */
@@ -538,22 +553,29 @@ h2 span {
 }
 
 /* Styling the headings inside the description */
-[id^="description"] h4 {
+.project-description h4 {
   margin: 0;
 }
 
 /* Hide all radio buttons (used for selecting cards) */
-#c1, #c2, #c3, #c4, #c5, #c6, #c7, #c8 {
-  display: none;
+input[name="slide"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
 }
 
 /* Styling to when a radio button is checked, expand the respective card */
-input:checked+label {
-  width: 600px;
+input[name="slide"]:checked + .project-card {
+  width: min(600px, 65vw);
+}
+
+input[name="slide"]:focus + .project-card {
+  outline: 3px solid #00c6ff;
+  outline-offset: 4px;
 }
 
 /* Styling to show the description when the card is selected */
-input:checked+label [id^="description"] {
+input[name="slide"]:checked + .project-card .project-description {
   opacity: 1 !important; /* Make it visible */
   transform: translateY(0) !important; /* Reset position */
 }
@@ -569,7 +591,7 @@ input:checked+label [id^="description"] {
 #card8 { background-image: url('images/Blog.png'); }
 
 /* Style for the source code buttons in each card */
-#btn1, #btn2, #btn3, #btn4, #btn5, #btn6, #btn7, #btn8 {
+.source-btn {
   margin-top: 2px;
   background-color: #fff;
   color: #223;
@@ -584,13 +606,13 @@ input:checked+label [id^="description"] {
 }
 
 /* Button hover effect */
-#btn1:hover, #btn2:hover, #btn3:hover, #btn4:hover, #btn5:hover, #btn6:hover, #btn7:hover {
+.source-btn:hover {
   background-color: #ddd;
 }
 
 /* End of services.html styling */
 
-/* Start of services.html styling */
+/* Start of contact.html styling */
 
 /* Setting background color for the contact page */
 #contact-body {
@@ -684,14 +706,14 @@ form button:hover {
   }
 
   /* Stacks nav links vertically and remove left padding */
-  nav ul {
+  .nav-list {
     flex-direction: column;
     align-items: flex-start;
     padding-left: 0;
   }
 
   /* Adds spacing between stacked nav items */
-  nav ul li {
+  .nav-list li {
     padding: 5px 0;
   }
 
@@ -741,21 +763,29 @@ form button:hover {
 
   /* Allows wrapping of the project slides and adjusts spacing */
   #project-slides {
-    flex-wrap: wrap;
+    flex-direction: column;
+    flex-wrap: nowrap;
     gap: 15px;
     justify-content: center;
     height: auto;
+    width: 100%;
   }
 
   /* Makes project cards full-width and adjusts height */
-  [id^="card"] {
+  .project-card {
     width: 100%;
-    height: auto;
+    min-height: 220px;
   }
 
   /* Allows description containers to expand */
-  [id^="description"] {
-    width: auto;
+  .project-description {
+    width: calc(100vw - 130px);
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  input[name="slide"]:checked + .project-card {
+    width: 100%;
   }
 
   /* Shrinks footer font and adjusts padding */
@@ -765,7 +795,7 @@ form button:hover {
   }
 
   /* Stacks footer nav items vertically with spacing */
-  #footer-nav {
+  .footer-nav {
     flex-direction: column;
     gap: 8px;
   }

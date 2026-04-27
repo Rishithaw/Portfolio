@@ -39,7 +39,7 @@ function formHasErrors() {
         if (!formFieldHasInput(field)) {
 
             // Shows error message if field is empty
-            document.getElementById(requiredFields[i] + "-error").style.display = "block";
+            showError(requiredFields[i]);
             if (!errorFlag) {
                 field.focus();
                 field.select();
@@ -50,12 +50,12 @@ function formHasErrors() {
 
     // ---------------------- Name validation ----------------------
     let nameValue = document.getElementById("name").value;
-    let nameRegex = /\b([A-ZÀ-ÿ][-,a-z. ']+[ ]*)+/; // Name must start with a capital letter
+    let nameRegex = /^[A-Za-zÀ-ÿ][A-Za-zÀ-ÿ\s.'-]{1,}$/; // Allows common name characters
 
     if (!nameRegex.test(nameValue)) {
 
         // Shows error message if true
-        document.getElementById("name-error").style.display = "block";
+        showError("name");
         if (!errorFlag) {
             document.getElementById("name").focus();
             document.getElementById("name").select();
@@ -65,12 +65,13 @@ function formHasErrors() {
 
     // ---------------------- Phone validation ----------------------
     let phoneValue = document.getElementById("phone").value;
-    let phoneRegex = /^\d{10}$/; // Only allows 10 digits
+    let phoneDigits = phoneValue.replace(/\D/g, "");
+    let phoneRegex = /^\d{10}$/; // Allows formatted input after removing punctuation
 
-    if (!phoneRegex.test(phoneValue)) {
+    if (!phoneRegex.test(phoneDigits)) {
 
         // Shows error message if true
-        document.getElementById("phone-error").style.display = "block";
+        showError("phone");
         if (!errorFlag) {
             document.getElementById("phone").focus();
             document.getElementById("phone").select();
@@ -85,7 +86,7 @@ function formHasErrors() {
     if (!emailRegex.test(emailValue)) {
 
         // Shows error message if ture
-        document.getElementById("email-error").style.display = "block";
+        showError("email");
         if (!errorFlag) {
             document.getElementById("email").focus();
             document.getElementById("email").select();
@@ -98,9 +99,11 @@ function formHasErrors() {
 
 // Hides all error messages on the form
 function hideAllErrors() {
-    document.getElementById("name-error").style.display = "none";
-    document.getElementById("phone-error").style.display = "none";
-    document.getElementById("email-error").style.display = "none";
+    let fields = ["name", "phone", "email"];
+
+    for (let i = 0; i < fields.length; i++) {
+        hideError(fields[i]);
+    }
 }
 
 // Checks if a form field has non-empty input
@@ -108,16 +111,34 @@ function formFieldHasInput(fieldElement) {
     return fieldElement.value != null && fieldElement.value.trim() !== "";
 }
 
+// Shows an error and marks the related field for assistive technology
+function showError(fieldId) {
+    document.getElementById(fieldId + "-error").style.display = "block";
+    document.getElementById(fieldId).setAttribute("aria-invalid", "true");
+}
+
+// Hides an error and clears invalid state
+function hideError(fieldId) {
+    document.getElementById(fieldId + "-error").style.display = "none";
+    document.getElementById(fieldId).setAttribute("aria-invalid", "false");
+}
+
 // Load event listener to attach form handlers once the page is ready
 function load() {
+    let contactForm = document.getElementById("contact-form");
+
+    if (!contactForm) {
+        return;
+    }
+
     // Add validation on form submission
-    document.getElementById("contact-form").addEventListener("submit", validate);
+    contactForm.addEventListener("submit", validate);
 
     // Reset form fields on load (optional UX enhancement)
-    document.getElementById("contact-form").reset();
+    contactForm.reset();
 
     // Add confirmation dialog when resetting the form
-    document.getElementById("contact-form").addEventListener("reset", resetForm);
+    contactForm.addEventListener("reset", resetForm);
 }
 
 // Run load function when DOM is fully loaded

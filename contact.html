@@ -8,22 +8,22 @@
     <link rel="stylesheet" type="text/css" href="styles.css" />
     <!--The logo that appears on the tab in the browswer -->
     <link rel="icon" href="images/icon.png" type="image/png" />
-    <script type="text/javascript" src="contact.js"></script>
+    <script type="text/javascript" src="contact.js" defer></script>
 </head>
 
 <body id="contact-body">
     <header>
         <div id="header">
             <div id="branding">
-                <img id="icon" src="images/Icon.png" alt="Logo">
-                <span>Rishitha Wickramasinghe</span>
+                <img id="icon" src="images/icon.png" alt="Logo">
+                <span class="brand-name">Rishitha Wickramasinghe</span>
             </div>
             <!-- navigation to each page -->
-            <nav aria-label="Top-navigation">    
-                <ul id="navs" aria-label="Top-links">
-                    <li><a href="index.html">About Me</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+            <nav aria-label="Top-navigation">
+                <ul id="navs" class="nav-list" aria-label="Top-links">
+                    <li><a class="nav-link" href="index.html">About Me</a></li>
+                    <li><a class="nav-link" href="services.html">Services</a></li>
+                    <li><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -32,19 +32,19 @@
     <!-- Main tag containing the form -->
     <main>
         <section id="contact-form-section">
-            <h2>Your Contact infomation</h2>
-            <form id="contact-form" action="index.html" method="get">
-                
+            <h2>Your Contact Information</h2>
+            <form id="contact-form" action="index.html" method="get" novalidate>
+
                 <label for="name">Name:</label>
-                <input type="text" id="name" name="name" placeholder="Full Name">
+                <input type="text" id="name" name="name" placeholder="Full Name" autocomplete="name" required aria-describedby="name-error" aria-invalid="false">
                 <p class="error" id="name-error">Please enter your name.</p>
 
                 <label for="phone">Phone Number:</label>
-                <input type="tel" id="phone" name="phone" placeholder="(XXX)-XXX-XXX">
+                <input type="tel" id="phone" name="phone" placeholder="(204) 123-4567" autocomplete="tel" required aria-describedby="phone-error" aria-invalid="false">
                 <p class="error" id="phone-error">Please enter a valid 10-digit phone number.</p>
 
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" placeholder="sample@example.com">
+                <input type="email" id="email" name="email" placeholder="sample@example.com" autocomplete="email" required aria-describedby="email-error" aria-invalid="false">
                 <p class="error" id="email-error">Please enter a valid email address.</p>
 
                 <label for="comments">Comments:</label>
@@ -62,8 +62,8 @@
         <div id="content">
             <p id="copyright">&copy; 2025 Rishitha Wickramasinghe. All rights reserved.</p>
             <!-- navigation to each page -->
-            <nav id="footer-nav">
-                <ul id="nav-ul">
+            <nav aria-label="Footer navigation">
+                <ul id="footer-nav" class="footer-nav">
                     <li><a href="index.html">About Me</a></li>
                     <li><a href="services.html">Services</a></li>
                     <li><a href="contact.html">Contact</a></li>
@@ -73,10 +73,10 @@
 
         <p id="contact-info">
             📍Winnipeg, Canada <br>
-            <a href="rishithaw1@gmail.com">rishithaw1@gmail.com</a>
+            <a href="mailto:rishithaw1@gmail.com">rishithaw1@gmail.com</a>
         </p>
 
-        <!-- Div tag containing socials. Target property opens the link in a new tab. 
+        <!-- Div tag containing socials. Target property opens the link in a new tab.
         Rel property prevents newly opened tabs from controlling the page the user came from -->
         <div id="socials">
             <a href="https://github.com/Rishithaw" target="_blank" rel="noopener noreferrer">

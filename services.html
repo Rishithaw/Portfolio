@@ -8,22 +8,21 @@
     <link rel="stylesheet" type="text/css" href="styles.css" />
     <!--The logo that appears on the tab in the browswer -->
     <link rel="icon" href="images/icon.png" type="image/png" />
-    <script type="text/javascript" src="index.js"></script>
 </head>
 
 <body>
     <header>
         <div id="header">
             <div id="branding">
-                <img id="icon" src="images/Icon.png" alt="Logo">
-                <span>Rishitha Wickramasinghe</span>
+                <img id="icon" src="images/icon.png" alt="Logo">
+                <span class="brand-name">Rishitha Wickramasinghe</span>
             </div>
             <!-- navigation to each page -->
             <nav aria-label="Top-navigation">
-                <ul id="navs" aria-label="Top-links">
-                    <li><a href="index.html">About Me</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                <ul id="navs" class="nav-list" aria-label="Top-links">
+                    <li><a class="nav-link" href="index.html">About Me</a></li>
+                    <li><a class="nav-link" href="services.html">Services</a></li>
+                    <li><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -96,21 +95,21 @@
                 <img src="images/Java.png" alt="Java Logo">
                 <h3>Java</h3>
                 <p>Object-oriented backend development</p>
-                <a href="https://www.java.com/en/" target="_blank">Visit Website</a>
+                <a href="https://www.java.com/en/" target="_blank" rel="noopener noreferrer">Visit Website</a>
             </div>
 
             <div class="card">
                 <img src="images/Python.png" alt="Python Logo">
                 <h3>Python</h3>
                 <p>Intergrate systems efficiently</p>
-                <a href="https://www.python.org/" target="_blank">Visit Website</a>
+                <a href="https://www.python.org/" target="_blank" rel="noopener noreferrer">Visit Website</a>
             </div>
 
             <div class="card">
                 <img src="images/Ruby.png" alt="Ruby Logo">
                 <h3>Ruby</h3>
                 <p>Programming productivity and simplicity</p>
-                <a href="https://www.ruby-lang.org/en/" target="_blank">Visit Website</a>
+                <a href="https://www.ruby-lang.org/en/" target="_blank" rel="noopener noreferrer">Visit Website</a>
             </div>
 
             <!-- Card2 -->
@@ -118,7 +117,7 @@
                 <img src="images/Mysql.png" alt="Mysql Logo">
                 <h3>MySql</h3>
                 <p>Relational database management</p>
-                <a href="https://www.mysql.com/" target="_blank">Visit Website</a>
+                <a href="https://www.mysql.com/" target="_blank" rel="noopener noreferrer">Visit Website</a>
             </div>
 
             <!-- Card3 -->
@@ -126,7 +125,7 @@
                 <img src="images/Javafx.png" alt="Javafx Logo">
                 <h3>Javafx</h3>
                 <p>Modern UI for desktop applications</p>
-                <a href="https://openjfx.io/" target="_blank">Visit Website</a>
+                <a href="https://openjfx.io/" target="_blank" rel="noopener noreferrer">Visit Website</a>
             </div>
 
             <!-- Card4 -->
@@ -134,7 +133,7 @@
                 <img src="images/Postgresql.png" alt="Postgresql Logo">
                 <h3>Postgresql</h3>
                 <p>Advanced SQL with open-source DB</p>
-                <a href="https://www.postgresql.org/" target="_blank">Visit Website</a>
+                <a href="https://www.postgresql.org/" target="_blank" rel="noopener noreferrer">Visit Website</a>
             </div>
 
             <!-- Card5 -->
@@ -142,7 +141,7 @@
                 <img src="images/HTML.png" alt="HTML Logo">
                 <h3>HTML</h3>
                 <p>Semantic and structured layouts</p>
-                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">Visit Website</a>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noopener noreferrer">Visit Website</a>
             </div>
 
             <!-- Card6 -->
@@ -150,7 +149,7 @@
                 <img src="images/CSS.png" alt="CSS Logo">
                 <h3>CSS</h3>
                 <p>Styling with animations & responsiveness</p>
-                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">Visit Website</a>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" rel="noopener noreferrer">Visit Website</a>
             </div>
 
             <!-- Card7 -->
@@ -158,14 +157,14 @@
                 <img src="images/JavaScript.png" alt="JavaScript Logo">
                 <h3>JavaScript</h3>
                 <p>Dynamic and interactive functionality</p>
-                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference" target="_blank">Visit Website</a>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference" target="_blank" rel="noopener noreferrer">Visit Website</a>
             </div>
 
             <div class="card">
                 <img src="images/React.png" alt="React Logo">
                 <h3>React</h3>
                 <p>Library for web and native user interfaces.</p>
-                <a href="https://react.dev/" target="_blank">Visit Website</a>
+                <a href="https://react.dev/" target="_blank" rel="noopener noreferrer">Visit Website</a>
             </div>
         </div>
 
@@ -176,13 +175,13 @@
 
                 <!-- Slide1 -->
                 <input type="radio" name="slide" id="c1" checked>
-                <label for="c1" id="card1">
-                    <div id="row1">
-                        <div id="icon1">1</div>
-                        <div id="description1">
+                <label for="c1" id="card1" class="project-card">
+                    <div id="row1" class="project-row">
+                        <div id="icon1" class="project-icon">1</div>
+                        <div id="description1" class="project-description">
                             <h4>TERMINAL PROGRAM</h4>
                             <p>A terminal run stock management program with username and password authentication.</p>
-                            <a href="https://github.com/Rishithaw/Stock-Management" id="btn1" target="_blank">Source
+                            <a href="https://github.com/Rishithaw/Stock-Management" id="btn1" class="source-btn" target="_blank" rel="noopener noreferrer">Source
                                 Code</a>
                         </div>
                     </div>
@@ -190,39 +189,39 @@
 
                 <!-- Slide2 -->
                 <input type="radio" name="slide" id="c2">
-                <label for="c2" id="card2">
-                    <div id="row2">
-                        <div id="icon2">2</div>
-                        <div id="description2">
-                            <h4>MANGEMENT SYSTEM</h4>
+                <label for="c2" id="card2" class="project-card">
+                    <div id="row2" class="project-row">
+                        <div id="icon2" class="project-icon">2</div>
+                        <div id="description2" class="project-description">
+                            <h4>MANAGEMENT SYSTEM</h4>
                             <p>This system is created for a supermarket using the MVC-Architecture.</p>
-                            <a href="https://github.com/Rishithaw/gdse-71-mvc" id="btn2" target="_blank">Source Code</a>
+                            <a href="https://github.com/Rishithaw/gdse-71-mvc" id="btn2" class="source-btn" target="_blank" rel="noopener noreferrer">Source Code</a>
                         </div>
                     </div>
                 </label>
 
                 <!-- Slide3 -->
                 <input type="radio" name="slide" id="c3">
-                <label for="c3" id="card3">
-                    <div id="row3">
-                        <div id="icon3">3</div>
-                        <div id="description3">
+                <label for="c3" id="card3" class="project-card">
+                    <div id="row3" class="project-row">
+                        <div id="icon3" class="project-icon">3</div>
+                        <div id="description3" class="project-description">
                             <h4>TIC TAC TOE</h4>
                             <p>A simple tic tac toe game where you play against the program.(Minimax Algorithm)</p>
-                            <a href="https://github.com/Rishithaw/Tic-Tac-Toe" id="btn3" target="_blank">Source Code</a>
+                            <a href="https://github.com/Rishithaw/Tic-Tac-Toe" id="btn3" class="source-btn" target="_blank" rel="noopener noreferrer">Source Code</a>
                         </div>
                     </div>
                 </label>
 
                 <!-- Slide4 -->
                 <input type="radio" name="slide" id="c4">
-                <label for="c4" id="card4">
-                    <div id="row4">
-                        <div id="icon4">4</div>
-                        <div id="description4">
+                <label for="c4" id="card4" class="project-card">
+                    <div id="row4" class="project-row">
+                        <div id="icon4" class="project-icon">4</div>
+                        <div id="description4" class="project-description">
                             <h4>BETTERDRIVE</h4>
                             <p>A Driving school management system made for easy use.</p>
-                            <a href="https://github.com/Rishithaw/Driving_School" id="btn4" target="_blank">Source
+                            <a href="https://github.com/Rishithaw/Driving_School" id="btn4" class="source-btn" target="_blank" rel="noopener noreferrer">Source
                                 Code</a>
                         </div>
                     </div>
@@ -230,13 +229,13 @@
 
                 <!-- Slide5 -->
                 <input type="radio" name="slide" id="c5">
-                <label for="c5" id="card5">
-                    <div id="row5">
-                        <div id="icon5">5</div>
-                        <div id="description5">
+                <label for="c5" id="card5" class="project-card">
+                    <div id="row5" class="project-row">
+                        <div id="icon5" class="project-icon">5</div>
+                        <div id="description5" class="project-description">
                             <h4>IMAGE VIEWER</h4>
                             <p>A basic application that can be used to view images.</p>
-                            <a href="https://github.com/Rishithaw/Image-Viewer" id="btn5" target="_blank">Source
+                            <a href="https://github.com/Rishithaw/Image-Viewer" id="btn5" class="source-btn" target="_blank" rel="noopener noreferrer">Source
                                 Code</a>
                         </div>
                     </div>
@@ -244,39 +243,39 @@
 
                 <!-- Slide6 -->
                 <input type="radio" name="slide" id="c6">
-                <label for="c6" id="card6">
-                    <div id="row6">
-                        <div id="icon6">6</div>
-                        <div id="description6">
+                <label for="c6" id="card6" class="project-card">
+                    <div id="row6" class="project-row">
+                        <div id="icon6" class="project-icon">6</div>
+                        <div id="description6" class="project-description">
                             <h4>PORTFOLIO</h4>
                             <p>The current website you are viewing in.</p>
-                            <a href="https://github.com/Rishithaw/Portfolio" id="btn6" target="_blank">Source Code</a>
+                            <a href="https://github.com/Rishithaw/Portfolio" id="btn6" class="source-btn" target="_blank" rel="noopener noreferrer">Source Code</a>
                         </div>
                     </div>
                 </label>
 
                 <!-- Slide7 -->
                 <input type="radio" name="slide" id="c7">
-                <label for="c7" id="card7">
-                    <div id="row7">
-                        <div id="icon7">7</div>
-                        <div id="description7">
+                <label for="c7" id="card7" class="project-card">
+                    <div id="row7" class="project-row">
+                        <div id="icon7" class="project-icon">7</div>
+                        <div id="description7" class="project-description">
                             <h4>MOVIE CATALOG</h4>
                             <p>A basic website to search up movies that have been released.</p>
-                            <a href="https://github.com/Rishithaw/Movies" id="btn7" target="_blank">Source Code</a>
+                            <a href="https://github.com/Rishithaw/Movies" id="btn7" class="source-btn" target="_blank" rel="noopener noreferrer">Source Code</a>
                         </div>
                     </div>
                 </label>
 
                 <!-- Slide8 -->
                 <input type="radio" name="slide" id="c8">
-                <label for="c8" id="card8">
-                    <div id="row8">
-                        <div id="icon8">8</div>
-                        <div id="description8">
+                <label for="c8" id="card8" class="project-card">
+                    <div id="row8" class="project-row">
+                        <div id="icon8" class="project-icon">8</div>
+                        <div id="description8" class="project-description">
                             <h4>BLOG SITE</h4>
                             <p>A simple website to manage students and vehicles they are driving.</p>
-                            <a href="https://github.com/Rishithaw/Final-Project-Web-Dev" id="btn8" target="_blank">Source Code</a>
+                            <a href="https://github.com/Rishithaw/Final-Project-Web-Dev" id="btn8" class="source-btn" target="_blank" rel="noopener noreferrer">Source Code</a>
                         </div>
                     </div>
                 </label>
@@ -289,8 +288,8 @@
             <p id="copyright">&copy; 2025 Rishitha Wickramasinghe. All rights reserved.</p>
 
             <!-- navigation to each page -->
-            <nav id="footer-nav">
-                <ul id="nav-ul">
+            <nav aria-label="Footer navigation">
+                <ul id="footer-nav" class="footer-nav">
                     <li><a href="index.html">About Me</a></li>
                     <li><a href="services.html">Services</a></li>
                     <li><a href="contact.html">Contact</a></li>
@@ -300,7 +299,7 @@
 
         <p id="contact-info">
             📍Winnipeg, Canada <br>
-            <a href="rishithaw1@gmail.com">rishithaw1@gmail.com</a>
+            <a href="mailto:rishithaw1@gmail.com">rishithaw1@gmail.com</a>
         </p>
 
         <!-- Div tag containing socials. Target property opens the link in a new tab.

@@ -3,6 +3,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // Typing animation for main heading
     let nameText = "I'm Rishitha Wickramasinghe"; // The sentence that is to be typed
     let nameElement = document.querySelector('#typer'); // Retrieving the element where the text will show
+    let titleElement = document.querySelector('#title-typer');
+
+    if (!nameElement || !titleElement) {
+        return;
+    }
+
     let nameIndex = 0; // Tracker to find whixh index it's on
     let deletingName = false; // Boolean flag
 
@@ -27,9 +33,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Typing animation for rotating titles
     let titles = ["Full Stack Developer", "UI/UX Designer", "Web Developer"]; // Array of titles to rotate through
-    
-    // Retrieving the element where the text will show
-    let titleElement = document.querySelector('#title-typer');
     
     // Trackers
     let titleIndex = 0;
