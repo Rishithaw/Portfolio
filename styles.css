@@ -313,6 +313,36 @@ h1 {
   margin-top: 18px;
 }
 
+.details-link,
+.source-link {
+  border-radius: 999px;
+  display: inline-block;
+  font-size: 13px;
+  padding: 9px 14px;
+  transition: transform var(--transition-base), box-shadow var(--transition-base), background-color var(--transition-base), color var(--transition-base);
+}
+
+.details-link {
+  background: var(--gradient-accent);
+  box-shadow: 0 0 14px #00c6ff33;
+  color: var(--text) !important;
+}
+
+.details-link::after,
+.details-btn::after {
+  content: " →";
+}
+
+.details-link:hover,
+.details-link:focus {
+  box-shadow: 0 0 20px #00c6ff66;
+  transform: translateY(-2px);
+}
+
+.source-link {
+  border: 1px solid var(--accent-soft);
+}
+
 #about-me,
 #skills-section {
   padding: 60px 20px 20px;
@@ -819,9 +849,20 @@ input[name="slide"]:checked + .project-card .project-description {
   align-self: flex-start;
 }
 
+.details-btn {
+  background: var(--gradient-accent);
+  color: var(--text);
+  box-shadow: 0 0 14px #00c6ff55;
+}
+
 /* Button hover effect */
 .source-btn:hover {
   background-color: #ddd;
+}
+
+.details-btn:hover {
+  background: var(--gradient-accent);
+  box-shadow: 0 0 22px #00c6ff88;
 }
 
 /* End of services.html styling */
