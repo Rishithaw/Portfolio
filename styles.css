@@ -1,3 +1,21 @@
+:root {
+  --bg: #1c1c1c;
+  --surface: #2a2a2a;
+  --surface-dark: #111;
+  --surface-muted: #242424;
+  --text: #ffffff;
+  --text-muted: #ccc;
+  --accent: #00c6ff;
+  --accent-dark: #0072ff;
+  --accent-soft: #00c6ff22;
+  --accent-tint: #00c6ff1a;
+  --gradient-accent: linear-gradient(90deg, var(--accent), var(--accent-dark));
+  --shadow-soft: 0 0 12px rgba(0, 255, 255, 0.05);
+  --shadow-hover: 0 0 20px rgba(0, 255, 255, 0.2);
+  --radius-card: 20px;
+  --transition-base: 0.3s ease;
+}
+
 /* Set up for the website */
 *,
 *::before,
@@ -9,7 +27,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  background-color: #1C1C1C;
+  background-color: var(--bg);
 }
 
 /* Start of Index.html styling */
@@ -19,8 +37,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #111;
-  border-bottom: 1px solid #00c6ff33;
+  background-color: var(--surface-dark);
+  border-bottom: 1px solid var(--accent-soft);
   padding: 10px 40px;
 }
 
@@ -56,7 +74,7 @@ body {
 .nav-link,
 .footer-nav a {
   position: relative;
-  color: #ffffff;
+  color: var(--text);
   text-shadow: 1px 1px #000;
   font-weight: bold;
   text-decoration: none;
@@ -75,7 +93,7 @@ body {
   transform: translateX(-50%);
   width: 0;
   height: 2px;
-  background-color: white;
+  background-color: var(--text);
   transition: width 0.3s ease-in-out;
 }
 
@@ -89,16 +107,31 @@ body {
 
 .nav-link.active,
 .footer-nav a[aria-current="page"] {
-  color: #00c6ff;
+  color: var(--accent);
 }
 
-/* Styling the span tag. Clip and text-fill property allows the gradient to be set on the text */
+.brand-name,
+h1,
+#typer,
+#about-me h2,
+#skills-section h2,
+#featured-projects h2,
+#education-section h2,
+#tools h2,
+#tech-stack h2 {
+  background: var(--gradient-accent);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#typer {
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
 .brand-name {
   font-weight: bold;
   font-size: 16px;
-  background: linear-gradient(90deg, #00c6ff, #0072ff);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 /* Styling the main tag */
@@ -107,7 +140,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: #ffffff;
+  color: var(--text);
 }
 
 /* Styling the image */
@@ -120,9 +153,6 @@ body {
 /* Styling the h1 tag */
 h1 {
   font-weight: bold;
-  background: linear-gradient(90deg, #00c6ff, #0072ff);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 /* Styling the div tag containing the text */
@@ -154,18 +184,18 @@ h1 {
   font-weight: bold;
   padding: 12px 22px;
   text-decoration: none;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  transition: transform var(--transition-base), box-shadow var(--transition-base), background-color var(--transition-base);
 }
 
 .primary-btn {
-  background: linear-gradient(90deg, #00c6ff, #0072ff);
-  color: #ffffff;
+  background: var(--gradient-accent);
+  color: var(--text);
   box-shadow: 0 0 18px #00c6ff33;
 }
 
 .secondary-btn {
-  border: 1px solid #00c6ff;
-  color: #00c6ff;
+  border: 1px solid var(--accent);
+  color: var(--accent);
 }
 
 .primary-btn:hover,
@@ -178,7 +208,7 @@ h1 {
 
 .secondary-btn:hover,
 .secondary-btn:focus {
-  background-color: #00c6ff1a;
+  background-color: var(--accent-tint);
 }
 
 .hero-socials {
@@ -189,7 +219,7 @@ h1 {
 }
 
 .hero-socials a {
-  color: #00c6ff;
+  color: var(--accent);
   font-size: 14px;
   font-weight: bold;
   text-decoration: none;
@@ -197,14 +227,78 @@ h1 {
 
 .hero-socials a:hover,
 .hero-socials a:focus {
-  color: #ffffff;
+  color: var(--text);
 }
 
 .section-intro {
-  color: #ccc;
+  color: var(--text-muted);
   line-height: 1.6;
   margin: -20px auto 35px;
   max-width: 720px;
+}
+
+.about-content,
+.not-found-card,
+.skill-card,
+.featured-project-card,
+.edu-card,
+.card {
+  background-color: var(--surface);
+  box-shadow: var(--shadow-soft);
+}
+
+.skill-card,
+.featured-project-card,
+.edu-card,
+.card,
+.services {
+  border-radius: var(--radius-card);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.skill-card:hover,
+.featured-project-card:hover,
+.edu-card:hover,
+.card:hover,
+.services:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-5px);
+}
+
+.skill-card,
+.featured-project-card {
+  border: 1px solid var(--accent-soft);
+  padding: 24px;
+  text-align: left;
+}
+
+.skill-card h3,
+.featured-project-card h3 {
+  color: var(--text);
+  margin-top: 0;
+}
+
+.skill-card p,
+.featured-project-card p {
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.featured-project-card a,
+.edu-card a,
+.card a,
+#contact-info a {
+  color: var(--accent);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.featured-project-card a:hover,
+.featured-project-card a:focus,
+.edu-card a:hover,
+#contact-info a:hover {
+  color: var(--text);
 }
 
 #about-me,
@@ -215,10 +309,9 @@ h1 {
 }
 
 .about-content {
-  background-color: #242424;
-  border: 1px solid #00c6ff22;
+  background-color: var(--surface-muted);
+  border: 1px solid var(--accent-soft);
   border-radius: 24px;
-  box-shadow: 0 0 12px rgba(0, 255, 255, 0.05);
   margin: 0 auto;
   max-width: 900px;
   padding: 32px;
@@ -228,9 +321,6 @@ h1 {
 #skills-section h2 {
   font-size: 32px;
   margin-bottom: 24px;
-  background: linear-gradient(90deg, #00c6ff, #0072ff);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 .about-content p {
@@ -252,30 +342,10 @@ h1 {
 }
 
 .skill-card {
-  background-color: #2a2a2a;
-  border: 1px solid #00c6ff22;
-  border-radius: 20px;
-  box-shadow: 0 0 12px rgba(0, 255, 255, 0.05);
   max-width: 260px;
-  padding: 24px;
-  text-align: left;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.skill-card:hover {
-  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
-  transform: translateY(-5px);
-}
-
-.skill-card h3 {
-  color: #ffffff;
-  margin-top: 0;
 }
 
 .skill-card p {
-  color: #ccc;
-  font-size: 14px;
-  line-height: 1.6;
   margin-bottom: 0;
 }
 
@@ -288,9 +358,6 @@ h1 {
 #featured-projects h2 {
   font-size: 32px;
   margin-bottom: 40px;
-  background: linear-gradient(90deg, #00c6ff, #0072ff);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 .featured-project-grid {
@@ -301,46 +368,16 @@ h1 {
 }
 
 .featured-project-card {
-  background-color: #2a2a2a;
-  border: 1px solid #00c6ff22;
-  border-radius: 20px;
-  box-shadow: 0 0 12px rgba(0, 255, 255, 0.05);
   max-width: 320px;
-  padding: 24px;
-  text-align: left;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.featured-project-card:hover {
-  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
-  transform: translateY(-5px);
-}
-
-.featured-project-card h3 {
-  color: #ffffff;
-  margin-top: 0;
 }
 
 .featured-project-card p {
-  color: #ccc;
-  font-size: 14px;
   line-height: 1.5;
 }
 
 .featured-project-card .project-tech {
-  color: #00c6ff;
+  color: var(--accent);
   font-weight: bold;
-}
-
-.featured-project-card a {
-  color: #00c6ff;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.featured-project-card a:hover,
-.featured-project-card a:focus {
-  color: #ffffff;
 }
 
 /* Styling the h1 tag that holds the name */
@@ -348,13 +385,9 @@ h1 {
   min-height: 50px;
   color: transparent; /* Prevents flicker before JS types */
   font-weight: bold;
-  background: linear-gradient(90deg, #00c6ff, #0072ff);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   white-space: nowrap;
   overflow: hidden;
-  border-right: 2px solid #ffffff;
+  border-right: 2px solid var(--text);
   width: fit-content;
   margin: 0 auto;
 }
@@ -378,17 +411,14 @@ h1 {
 #education-section {
   padding: 60px 20px;
   text-align: center;
-  background-color: #1c1c1c;
-  color: white;
+  background-color: var(--bg);
+  color: var(--text);
 }
 
 /* Styling the h2 tag in the section tag */
 #education-section h2 {
   font-size: 32px;
   margin-bottom: 40px;
-  background: linear-gradient(90deg, #00c6ff, #0072ff);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 /* Styling the div tag that contains the cards */
@@ -401,13 +431,9 @@ h1 {
 
 /* Styling the cards */
 .edu-card {
-  background-color: #2a2a2a;
   padding: 20px;
-  border-radius: 20px;
   width: 280px;
   text-align: center;
-  box-shadow: 0 0 12px rgba(0, 255, 255, 0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* Styling the image in the cards */
@@ -426,37 +452,18 @@ h1 {
 /* Styling the p tag in the cards */
 .edu-card p {
   font-size: 14px;
-  color: #ccc;
+  color: var(--text-muted);
   margin-bottom: 15px;
-}
-
-/* Styling the a tag in the cards */
-.edu-card a {
-  text-decoration: none;
-  color: #00c6ff;
-  font-weight: bold;
-  transition: color 0.3s;
-}
-
-/* Adding a hover effect to the cards */
-.edu-card:hover {
-  transform: translateY(-5px); /* Moves the card */
-  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
-}
-
-/* Adding a hover effect to the a tag in the cards */
-.edu-card a:hover {
-  color: #ffffff;
 }
 
 /* Styling the footer*/
 #footer {
-  background-color: #111;
+  background-color: var(--surface-dark);
   color: #aaa;
   text-align: center;
   padding: 30px 20px;
   margin-top: 60px;
-  font-size: 12px
+  font-size: 12px;
 }
 
 /* Styling the copyrights line */
@@ -489,12 +496,6 @@ h1 {
   font-size: 12px;
   position: relative;
   z-index: 10;
-}
-
-/* Styling the link in the tag */
-#contact-info a {
-  color: #00c6ff;
-  text-decoration: none;
 }
 
 /* Adding a hover effect to the link */
@@ -534,17 +535,14 @@ h1 {
 #tools {
   padding: 20px 20px 20px;
   text-align: center;
-  background-color: #1C1C1C;
-  color: #ffffff;
+  background-color: var(--bg);
+  color: var(--text);
 }
 
 /* Styling the h2 tag */
 #tools h2 {
   font-size: 28px;
   margin-bottom: 30px;
-  background: linear-gradient(90deg, #00c6ff, #0072ff);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 /* Styling the div tag that has the images and p tag*/
@@ -561,7 +559,7 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: transform 0.3s ease;
+  transition: transform var(--transition-base);
 }
 
 /* Styling each image in the div tag */
@@ -580,15 +578,15 @@ h1 {
 /* Styling the p tag */
 .apps p {
   font-size: 14px;
-  color: #ccc;
+  color: var(--text-muted);
   margin: 0;
 }
 
 /* Styling the section tag containing the services */
 #services-overview {
   padding: 50px 20px;
-  background-color: #111;
-  color: white;
+  background-color: var(--surface-dark);
+  color: var(--text);
   text-align: center;
 }
 
@@ -596,7 +594,7 @@ h1 {
 #services-overview h2 {
   font-size: 2em;
   margin-bottom: 10px;
-  color: #ffffff;
+  color: var(--text);
   text-shadow: 1px 1px 4px #000;
 }
 
@@ -610,21 +608,30 @@ h1 {
   margin: 0 auto;
 }
 
+.services {
+  background-color: #1f1f1f;
+  border: 1px solid var(--accent-soft);
+  padding: 24px;
+  width: 260px;
+}
+
+.services p {
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
 /* Styling the section tag that holds the cards */
 #tech-stack {
   padding: 60px 20px;
   text-align: center;
-  background-color: #1c1c1c;
-  color: white;
+  background-color: var(--bg);
+  color: var(--text);
 }
 
 /* Styling the h2 tag */
 #tech-stack h2 {
   font-size: 32px;
   margin-bottom: 40px;
-  background: linear-gradient(90deg, #00c6ff, #0072ff);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 /* Styling the div tag that holds the cards */
@@ -637,13 +644,9 @@ h1 {
 
 /* Styling the cards */
 .card {
-  background-color: #2a2a2a;
   padding: 20px;
-  border-radius: 20px;
   width: 200px;
   text-align: center;
-  box-shadow: 0 0 12px rgba(0, 255, 255, 0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* Styling the image in the cards */
@@ -662,34 +665,13 @@ h1 {
 /* Styling the p tag in the cards */
 .card p {
   font-size: 12px;
-  color: #ccc;
+  color: var(--text-muted);
   margin-bottom: 15px;
-}
-
-/* Styling the a tag in the cards */
-.card a {
-  text-decoration: none;
-  color: #00c6ff;
-  font-weight: bold;
-  transition: color 0.3s;
 }
 
 /* Adding a hover effect to the cards */
 .card:hover {
-  color: #ffffff;
-}
-
-/* Adding a hover effect to the a tag in the cards */
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 20px #00ffff33;
-}
-
-/* Styling the h3 tag in the mysql card */
-#mysql-card h3 {
-  font-size: 18px;
-  margin-top: 34px;
-  margin-bottom: 10px;
+  color: var(--text);
 }
 
 #projects {
@@ -832,7 +814,7 @@ input[name="slide"]:checked + .project-card .project-description {
 
 /* Setting background color for the contact page */
 #contact-body {
-  background-color: #1C1C1C;
+  background-color: var(--bg);
 }
 
 /* Styling for the main contact form container */
@@ -870,7 +852,7 @@ form textarea {
   border: 2px solid #ccc;
   border-radius: 6px;
   font-size: 1em;
-  transition: 0.3s; /* Smooth focus transitions */
+  transition: var(--transition-base); /* Smooth focus transitions */
 }
 
 /* Highlighting the input/textarea when focused */
@@ -909,24 +891,24 @@ form button {
   margin-top: 25px;
   padding: 10px 25px;
   border: none;
-  background: linear-gradient(90deg, #00c6ff, #0072ff);
-  color: white;
+  background: var(--gradient-accent);
+  color: var(--text);
   text-shadow: 1px 1px #000;
   border-radius: 6px;
   cursor: pointer;
   font-size: 1em;
-  transition: 0.3s ease;
+  transition: var(--transition-base);
 }
 
 /* Adding a hover effect */
 form button:hover {
-  background-color: #0072ff;
+  background-color: var(--accent-dark);
 }
 
 /* Start of 404.html styling */
 .not-found-main {
   align-items: center;
-  color: #ffffff;
+  color: var(--text);
   display: flex;
   justify-content: center;
   min-height: 70vh;
@@ -935,8 +917,8 @@ form button:hover {
 }
 
 .not-found-card {
-  background-color: #242424;
-  border: 1px solid #00c6ff33;
+  background-color: var(--surface-muted);
+  border: 1px solid var(--accent-soft);
   border-radius: 24px;
   box-shadow: 0 0 24px rgba(0, 198, 255, 0.12);
   max-width: 680px;
