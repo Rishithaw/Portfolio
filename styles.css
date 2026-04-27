@@ -301,6 +301,18 @@ h1 {
   color: var(--text);
 }
 
+.project-card-actions,
+.project-links,
+.project-detail-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.project-card-actions {
+  margin-top: 18px;
+}
+
 #about-me,
 #skills-section {
   padding: 60px 20px 20px;
@@ -755,6 +767,10 @@ h1 {
   margin: 0;
 }
 
+.project-links {
+  margin-top: 8px;
+}
+
 /* Hide all radio buttons (used for selecting cards) */
 input[name="slide"] {
   position: absolute;
@@ -809,6 +825,82 @@ input[name="slide"]:checked + .project-card .project-description {
 }
 
 /* End of services.html styling */
+
+/* Start of project detail styling */
+.project-detail-main {
+  color: var(--text);
+  padding: 60px 20px 20px;
+}
+
+.project-hero {
+  background-color: var(--surface-muted);
+  border: 1px solid var(--accent-soft);
+  border-radius: 28px;
+  box-shadow: var(--shadow-soft);
+  margin: 0 auto 34px;
+  max-width: 980px;
+  padding: 44px;
+  text-align: center;
+}
+
+.project-eyebrow {
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 0.12em;
+  margin: 0 0 10px;
+  text-transform: uppercase;
+}
+
+.project-hero h1 {
+  font-size: clamp(42px, 7vw, 72px);
+  margin: 0 0 18px;
+}
+
+.project-hero p {
+  color: #ddd;
+  line-height: 1.7;
+  margin: 0 auto 24px;
+  max-width: 760px;
+}
+
+.project-detail-actions {
+  justify-content: center;
+}
+
+.project-detail-grid {
+  display: grid;
+  gap: 22px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  margin: 0 auto;
+  max-width: 1100px;
+}
+
+.project-detail-card {
+  background-color: var(--surface);
+  border: 1px solid var(--accent-soft);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-soft);
+  padding: 26px;
+}
+
+.project-detail-card h2 {
+  color: var(--text);
+  margin-top: 0;
+}
+
+.project-detail-card p,
+.project-detail-card li {
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.project-detail-card ul {
+  margin-bottom: 0;
+  padding-left: 20px;
+}
+
+/* End of project detail styling */
 
 /* Start of contact.html styling */
 
@@ -1007,6 +1099,17 @@ form button:hover {
 
   .not-found-actions {
     align-items: center;
+    flex-direction: column;
+  }
+
+  .project-hero {
+    padding: 32px 24px;
+  }
+
+  .project-detail-actions,
+  .project-card-actions,
+  .project-links {
+    align-items: flex-start;
     flex-direction: column;
   }
 
