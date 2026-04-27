@@ -81,9 +81,15 @@ body {
 
 .nav-link:hover::after,
 .nav-link:focus::after,
+.nav-link.active::after,
 .footer-nav a:hover::after,
 .footer-nav a:focus::after {
   width: 100%;
+}
+
+.nav-link.active,
+.footer-nav a[aria-current="page"] {
+  color: #00c6ff;
 }
 
 /* Styling the span tag. Clip and text-fill property allows the gradient to be set on the text */
@@ -199,6 +205,78 @@ h1 {
   line-height: 1.6;
   margin: -20px auto 35px;
   max-width: 720px;
+}
+
+#about-me,
+#skills-section {
+  padding: 60px 20px 20px;
+  text-align: center;
+  width: 100%;
+}
+
+.about-content {
+  background-color: #242424;
+  border: 1px solid #00c6ff22;
+  border-radius: 24px;
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.05);
+  margin: 0 auto;
+  max-width: 900px;
+  padding: 32px;
+}
+
+#about-me h2,
+#skills-section h2 {
+  font-size: 32px;
+  margin-bottom: 24px;
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.about-content p {
+  color: #ddd;
+  line-height: 1.7;
+  margin: 0 auto 16px;
+  max-width: 760px;
+}
+
+.about-content p:last-child {
+  margin-bottom: 0;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+}
+
+.skill-card {
+  background-color: #2a2a2a;
+  border: 1px solid #00c6ff22;
+  border-radius: 20px;
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.05);
+  max-width: 260px;
+  padding: 24px;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+  transform: translateY(-5px);
+}
+
+.skill-card h3 {
+  color: #ffffff;
+  margin-top: 0;
+}
+
+.skill-card p {
+  color: #ccc;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 0;
 }
 
 #featured-projects {
@@ -881,7 +959,9 @@ form button:hover {
     max-width: 260px;
   }
 
-  .featured-project-card {
+  .about-content,
+  .featured-project-card,
+  .skill-card {
     max-width: 90%;
   }
 

@@ -4,7 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rishitha Wickramasinghe</title>
+    <meta name="description" content="Portfolio of Rishitha Wickramasinghe, a Winnipeg-based software developer building responsive websites, Java applications, and database-driven systems.">
+    <meta name="author" content="Rishitha Wickramasinghe">
+    <meta property="og:title" content="Rishitha Wickramasinghe | Software Developer Portfolio">
+    <meta property="og:description" content="Explore Rishitha's projects, skills, education, and software development work.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/Photo.jpg">
+    <title>Rishitha Wickramasinghe | Software Developer</title>
     <!--The logo that appears on the tab in the browswer -->
     <link rel="icon" href="images/Icon.png" type="image/png" />
     <link rel="stylesheet" type="text/css" href="styles.css" />
@@ -20,7 +26,7 @@
             <!-- navigation to each page -->
             <nav aria-label="Top-navigation">
                 <ul id="navs" class="nav-list">
-                    <li><a class="nav-link" href="index.html">About Me</a></li>
+                    <li><a class="nav-link active" href="index.html" aria-current="page">About Me</a></li>
                     <li><a class="nav-link" href="services.html">Services</a></li>
                     <li><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
@@ -28,7 +34,7 @@
         </div>
     </header>
     <main id="home">
-        <img id="profile" src="images/Photo.jpg" alt="Photo">
+        <img id="profile" src="images/Photo.jpg" alt="Rishitha Wickramasinghe" fetchpriority="high">
         <div id="info">
             <!--Blank due to javascript filling -->
             <h1 id="typer"></h1>
@@ -50,6 +56,40 @@
                 <a href="https://www.linkedin.com/in/rishitha-wickramasinghe-93442b324/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
             </div>
         </div>
+
+        <section id="about-me">
+            <div class="about-content">
+                <h2>About Me</h2>
+                <p>I am currently building my foundation in software development through hands-on projects, coursework, and continuous practice. My work combines front-end development, Java programming, database design, and user-focused problem solving.</p>
+                <p>I enjoy creating applications that are practical, easy to understand, and useful for real users. I am especially interested in roles where I can keep improving as a full-stack or software developer while contributing to clean, reliable projects.</p>
+            </div>
+        </section>
+
+        <section id="skills-section">
+            <h2>Skills</h2>
+            <p class="section-intro">A snapshot of the technologies and tools I use when building websites, applications, and database-backed systems.</p>
+            <div class="skills-grid">
+                <article class="skill-card">
+                    <h3>Frontend</h3>
+                    <p>HTML, CSS, JavaScript, responsive layouts, accessibility basics</p>
+                </article>
+
+                <article class="skill-card">
+                    <h3>Backend & Programming</h3>
+                    <p>Java, Python, Ruby, object-oriented programming, MVC architecture</p>
+                </article>
+
+                <article class="skill-card">
+                    <h3>Databases</h3>
+                    <p>MySQL, PostgreSQL, relational design, data management workflows</p>
+                </article>
+
+                <article class="skill-card">
+                    <h3>Tools</h3>
+                    <p>GitHub, VS Code, Figma, Draw.io, Docker, Scene Builder</p>
+                </article>
+            </div>
+        </section>
 
         <section id="featured-projects">
             <h2>Featured Projects</h2>
@@ -87,7 +127,7 @@
 
                 <!-- Card1 -->
                 <div class="edu-card">
-                    <img src="images/lyceum.jpg" alt="Lyceum International School Logo">
+                    <img src="images/lyceum.jpg" alt="Lyceum International School Logo" loading="lazy" decoding="async">
                     <h3>Lyceum International School - Wattala</h3>
                     <p>Completed school education (British Curriculum).</p>
                     <a href="https://www.lyceum.lk/branches/wattala/" target="_blank" rel="noopener noreferrer">Visit Website</a>
@@ -95,7 +135,7 @@
 
                 <!-- Card2 -->
                 <div class="edu-card">
-                    <img src="images/ijse.png" alt="IJSE Logo">
+                    <img src="images/ijse.png" alt="IJSE Logo" loading="lazy" decoding="async">
                     <h3>Institute of Java & Software Engineering</h3>
                     <p>Diploma in Software Engineering and Java Programming.</p>
                     <a href="https://ijse.lk/" target="_blank" rel="noopener noreferrer">Visit Website</a>
@@ -103,7 +143,7 @@
 
                 <!-- Card3 -->
                 <div class="edu-card">
-                    <img src="images/rrc.png" alt="Red River College Logo">
+                    <img src="images/rrc.png" alt="Red River College Logo" loading="lazy" decoding="async">
                     <h3>Red River College Polytechnic</h3>
                     <p>Advanced Diploma in Information Technology (Canada).</p>
                     <a href="https://www.rrc.ca/" target="_blank" rel="noopener noreferrer">Visit Website</a>
@@ -118,7 +158,7 @@
             <!-- navigation to each page -->
             <nav aria-label="Footer navigation">
                 <ul id="footer-nav" class="footer-nav">
-                    <li><a href="index.html">About Me</a></li>
+                    <li><a href="index.html" aria-current="page">About Me</a></li>
                     <li><a href="services.html">Services</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
@@ -134,11 +174,11 @@
         Rel property prevents newly opened tabs from controlling the page the user came from -->
         <div id="socials">
             <a href="https://github.com/Rishithaw" target="_blank" rel="noopener noreferrer">
-                <img src="images/Github.png" alt="Github">
+                <img src="images/Github.png" alt="Github" loading="lazy" decoding="async">
             </a>
 
             <a href="https://www.linkedin.com/in/rishitha-wickramasinghe-93442b324/" target="_blank" rel="noopener noreferrer">
-                <img src="images/Linkedln.jpg" alt="LinkedIn">
+                <img src="images/Linkedln.jpg" alt="LinkedIn" loading="lazy" decoding="async">
             </a>
         </div>
     </footer>
