@@ -498,6 +498,7 @@ h2 span {
 /* Styling the row container inside each card */
 [id^="card"]>[id^="row"] {
   color: #a1f9f9;
+  text-shadow: 1px 1px #000;
   display: flex;
   flex-wrap: nowrap;
 }
