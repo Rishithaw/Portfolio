@@ -19,7 +19,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #f60505;
+  background-color: #111;
+  border-bottom: 1px solid #00c6ff33;
   padding: 10px 40px;
 }
 
@@ -124,6 +125,144 @@ h1 {
   flex-direction: column;
   text-align: center;
   font-size: 20px;
+  max-width: 900px;
+  padding: 0 20px;
+}
+
+#info p {
+  color: #e5e5e5;
+  line-height: 1.6;
+}
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 18px;
+  flex-wrap: wrap;
+}
+
+.primary-btn,
+.secondary-btn {
+  border-radius: 999px;
+  font-weight: bold;
+  padding: 12px 22px;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.primary-btn {
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  color: #ffffff;
+  box-shadow: 0 0 18px #00c6ff33;
+}
+
+.secondary-btn {
+  border: 1px solid #00c6ff;
+  color: #00c6ff;
+}
+
+.primary-btn:hover,
+.primary-btn:focus,
+.secondary-btn:hover,
+.secondary-btn:focus {
+  transform: translateY(-3px);
+  box-shadow: 0 0 20px #00c6ff55;
+}
+
+.secondary-btn:hover,
+.secondary-btn:focus {
+  background-color: #00c6ff1a;
+}
+
+.hero-socials {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.hero-socials a {
+  color: #00c6ff;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.hero-socials a:hover,
+.hero-socials a:focus {
+  color: #ffffff;
+}
+
+.section-intro {
+  color: #ccc;
+  line-height: 1.6;
+  margin: -20px auto 35px;
+  max-width: 720px;
+}
+
+#featured-projects {
+  padding: 60px 20px 20px;
+  text-align: center;
+  width: 100%;
+}
+
+#featured-projects h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.featured-project-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+}
+
+.featured-project-card {
+  background-color: #2a2a2a;
+  border: 1px solid #00c6ff22;
+  border-radius: 20px;
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.05);
+  max-width: 320px;
+  padding: 24px;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.featured-project-card:hover {
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+  transform: translateY(-5px);
+}
+
+.featured-project-card h3 {
+  color: #ffffff;
+  margin-top: 0;
+}
+
+.featured-project-card p {
+  color: #ccc;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.featured-project-card .project-tech {
+  color: #00c6ff;
+  font-weight: bold;
+}
+
+.featured-project-card a {
+  color: #00c6ff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.featured-project-card a:hover,
+.featured-project-card a:focus {
+  color: #ffffff;
 }
 
 /* Styling the h1 tag that holds the name */
@@ -370,9 +509,8 @@ h1 {
 /* Styling the section tag containing the services */
 #services-overview {
   padding: 50px 20px;
-  background-color: #A6A6A6;
+  background-color: #111;
   color: white;
-  text-shadow: 1px 1px #000;
   text-align: center;
 }
 
@@ -616,7 +754,7 @@ input[name="slide"]:checked + .project-card .project-description {
 
 /* Setting background color for the contact page */
 #contact-body {
-  background-color: #939191;
+  background-color: #1C1C1C;
 }
 
 /* Styling for the main contact form container */
@@ -679,7 +817,7 @@ form button {
   margin-top: 25px;
   padding: 10px 25px;
   border: none;
-  background-color: #C1875F;
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
   color: white;
   text-shadow: 1px 1px #000;
   border-radius: 6px;
@@ -690,7 +828,7 @@ form button {
 
 /* Adding a hover effect */
 form button:hover {
-  background-color: #d97f43;
+  background-color: #0072ff;
 }
 
 @media (max-width: 768px) {
@@ -728,6 +866,23 @@ form button:hover {
   #info {
     font-size: 16px;
     padding: 0 15px;
+  }
+
+  .hero-actions,
+  .hero-socials {
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .primary-btn,
+  .secondary-btn {
+    text-align: center;
+    width: 100%;
+    max-width: 260px;
+  }
+
+  .featured-project-card {
+    max-width: 90%;
   }
 
   /* Stacks the cards and icon groups vertically and center them */
