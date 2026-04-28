@@ -17,6 +17,10 @@
   --shadow-hover: 0 0 20px rgba(0, 255, 255, 0.2);
   --radius-card: 20px;
   --transition-base: 0.3s ease;
+  --logo-sm: 40px;
+  --logo-md: 64px;
+  --logo-lg: 110px;
+  --logo-xl: 150px;
 }
 
 /* Set up for the website */
@@ -53,8 +57,10 @@ body {
 
 /* Styling the logo */
 #icon {
-  height: 40px;
+  height: var(--logo-sm);
+  width: var(--logo-sm);
   margin-right: 10px;
+  object-fit: contain;
 }
 
 /* Styling the unordered list */
@@ -149,8 +155,10 @@ h1,
 
 /* Styling the image */
 #profile {
-  height: 400px;
+  height: clamp(240px, 38vw, 400px);
+  width: clamp(240px, 38vw, 400px);
   border-radius: 50%;
+  object-fit: cover;
   padding-top: 40px;
 }
 
@@ -501,9 +509,14 @@ h1 {
 
 /* Styling the image in the cards */
 .edu-card img {
-  max-height: 200px;
+  background-color: var(--surface-dark);
+  border: 1px solid var(--accent-soft);
+  border-radius: 16px;
+  height: var(--logo-xl);
+  padding: 14px;
+  width: 100%;
   margin-bottom: 20px;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 /* Styling the h3 tag in the cards */
@@ -578,10 +591,11 @@ h1 {
 
 /* Styling the image tag and adding a transition  */
 #socials a img {
-  width: 30px;
-  height: 30px;
+  width: 32px;
+  height: 32px;
   margin: 0 8px;
   filter: grayscale(100%) brightness(1.2);
+  object-fit: contain;
   transition: filter 0.3s;
 }
 
@@ -623,13 +637,18 @@ h1 {
   flex-direction: column;
   align-items: center;
   transition: transform var(--transition-base);
+  width: 110px;
 }
 
 /* Styling each image in the div tag */
 .apps img {
-  width: 60px;
-  height: 60px;
+  background-color: var(--surface-muted);
+  border: 1px solid var(--accent-soft);
+  border-radius: 18px;
+  width: var(--logo-lg);
+  height: var(--logo-lg);
   object-fit: contain;
+  padding: 18px;
   margin-bottom: 10px;
 }
 
@@ -714,9 +733,14 @@ h1 {
 
 /* Styling the image in the cards */
 .card img {
-  max-height: 120px;
+  background-color: var(--surface-dark);
+  border: 1px solid var(--accent-soft);
+  border-radius: 18px;
+  height: var(--logo-lg);
+  width: 100%;
   margin-bottom: 20px;
-  object-fit: cover;
+  object-fit: contain;
+  padding: 18px;
 }
 
 /* Styling the h3 tag in the cards */
@@ -765,6 +789,10 @@ h1 {
 
 .project-summary-card img {
   aspect-ratio: 16 / 9;
+  background-color: var(--surface-dark);
+  border-bottom: 1px solid var(--accent-soft);
+  display: block;
+  height: 190px;
   object-fit: cover;
   width: 100%;
 }
@@ -1044,6 +1072,7 @@ form button:hover {
   /* Adjusting the profile image */
   #profile {
     width: 70%;
+    max-width: 320px;
     height: auto;
     padding-top: 20px;
   }
@@ -1151,7 +1180,7 @@ form button:hover {
 
   /* Resizes social media icons */
   #socials a img {
-    width: 24px;
-    height: 24px;
+    width: 28px;
+    height: 28px;
   }
 }
