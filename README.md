@@ -30,7 +30,7 @@ A personal portfolio website for Rishitha Wickramasinghe. The site highlights ed
 - Grouped skills section for frontend, backend, databases, and tools.
 - Page-specific SEO and social sharing metadata.
 - Education and technology cards.
-- Interactive project showcase.
+- Project grid with source links and case-study links.
 - Contact form validation for name, phone number, and email.
 - On-page contact form confirmation after successful validation.
 - Custom 404 page for a smoother deployed experience.

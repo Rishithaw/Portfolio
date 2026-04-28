@@ -302,7 +302,6 @@ h1 {
 }
 
 .project-card-actions,
-.project-links,
 .project-detail-actions {
   display: flex;
   flex-wrap: wrap;
@@ -330,8 +329,7 @@ h1 {
   text-transform: uppercase;
 }
 
-.details-link::after,
-.details-btn::after {
+.details-link::after {
   content: " →";
 }
 
@@ -725,153 +723,55 @@ h1 {
   color: var(--text);
 }
 
-#projects {
+#projects.projects-grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  margin: 0 auto;
+  max-width: 1200px;
   width: 100%;
-  min-height: 60vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow-x: hidden;
 }
 
-#project-slides {
-  gap: 20px;
-  min-height: 400px;
+.project-summary-card {
+  background-color: var(--surface);
+  border: 1px solid var(--accent-soft);
+  border-radius: 24px;
+  box-shadow: var(--shadow-soft);
   display: flex;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  max-width: 100%;
-}
-
-/* Styling the project cards */
-.project-card {
-  width: clamp(70px, 8vw, 90px);
-  min-height: 400px;
-  border-radius: .75rem;
-  background-size: cover; /* Make background image cover the card */
-  background-position: center;
-  cursor: pointer; /* Cursor changes to pointer on hover */
-  overflow: hidden; /* Hide overflow content */
-  border-radius: 2rem;
-  display: flex;
-  align-items: flex-end;
-  transition: .6s cubic-bezier(.28, -0.03, 0, .99); /* Smooth transition effect */
-  box-shadow: 0px 10px 30px -5px #000000cc;
-}
-
-/* Styling the row container inside each card */
-.project-row {
-  color: #a1f9f9;
-  text-shadow: 1px 1px #000;
-  display: flex;
-  flex-wrap: nowrap;
-}
-
-/* Styling each icon inside each row */
-.project-icon {
-  background: #223;
-  color: white;
-  border-radius: 50%; /* Circle shape.(Is oval) */
-  width: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 15px;
-}
-
-/* Styling the description section inside each card */
-.project-description {
-  display: flex;
-  justify-content: center;
   flex-direction: column;
-  overflow: hidden; /* Hide overflow content */
-  height: 100px; /* Image height */
-  width: min(520px, 65vw); /* Full description width when expanded */
-  opacity: 0; /* Hidden by default */
-  transform: translateY(30px);
-  transition-delay: .3s;
-  transition: all .3s ease;  /* Smooth animation */
+  overflow: hidden;
+  text-align: left;
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
 }
 
-/* Styling the p tag inside the description */
-.project-description p {
-  text-shadow: 1px 1px #000;
-  color: #6a6a6a;
-  backdrop-filter: blur(8px); /* Blurring the background behind text */
-  margin: 0;
+.project-summary-card:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-5px);
 }
 
-/* Styling the headings inside the description */
-.project-description h4 {
-  margin: 0;
+.project-summary-card img {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  width: 100%;
 }
 
-.project-links {
-  margin-top: 8px;
+.project-summary-card div {
+  padding: 22px;
 }
 
-/* Hide all radio buttons (used for selecting cards) */
-input[name="slide"] {
-  position: absolute;
-  opacity: 0;
-  pointer-events: none;
-}
-
-/* Styling to when a radio button is checked, expand the respective card */
-input[name="slide"]:checked + .project-card {
-  width: min(600px, 65vw);
-}
-
-input[name="slide"]:focus + .project-card {
-  outline: 3px solid #00c6ff;
-  outline-offset: 4px;
-}
-
-/* Styling to show the description when the card is selected */
-input[name="slide"]:checked + .project-card .project-description {
-  opacity: 1 !important; /* Make it visible */
-  transform: translateY(0) !important; /* Reset position */
-}
-
-/* Background images for each individual card */
-#card1 { background-image: url('images/Terminal.jpeg'); }
-#card2 { background-image: url('images/Manage.jpeg'); }
-#card3 { background-image: url('images/Tictactoe.jpg'); }
-#card4 { background-image: url('images/Driving.jpg'); }
-#card5 { background-image: url('images/Gallery.jpg'); }
-#card6 { background-image: url('images/Portfolio.png'); }
-#card7 { background-image: url('images/Movie.jpg'); }
-#card8 { background-image: url('images/Blog.png'); }
-
-/* Style for the source code buttons in each card */
-.source-btn {
-  margin-top: 2px;
-  background-color: #fff;
-  color: #223;
-  padding: 8px 14px;
-  border: none;
-  border-radius: 1rem;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 0.9rem;
-  transition: background-color 0.3s ease; /* Smooth hover effect */
-  align-self: flex-start;
-}
-
-.details-btn {
-  background: var(--gradient-accent);
+.project-summary-card h3 {
   color: var(--text);
-  box-shadow: 0 0 14px #00c6ff55;
+  margin: 0 0 12px;
 }
 
-/* Button hover effect */
-.source-btn:hover {
-  background-color: #ddd;
+.project-summary-card p {
+  color: var(--text-muted);
+  line-height: 1.55;
 }
 
-.details-btn:hover {
-  background: var(--gradient-accent);
-  box-shadow: 0 0 22px #00c6ff88;
+.project-summary-card .project-tech {
+  color: var(--accent);
+  font-weight: bold;
 }
 
 /* End of services.html styling */
@@ -964,17 +864,17 @@ input[name="slide"]:checked + .project-card .project-description {
   max-width: 700px;
   margin: 60px auto;
   padding: 40px;
-  background-color: #fefefe;
-  border-radius: 10px;
-  box-shadow: 0 0 15px #00000039;
-  font-family: Arial, sans-serif; /* Changing the font */
+  background-color: var(--surface-muted);
+  border: 1px solid var(--accent-soft);
+  border-radius: 24px;
+  box-shadow: var(--shadow-soft);
 }
 
 /* Styling the section heading */
 #contact-form-section h2 {
   text-align: center;
   margin-bottom: 30px;
-  color: #0a0a0a;
+  color: var(--text);
 }
 
 /* Styling all the form labels */
@@ -982,7 +882,7 @@ form label {
   display: block;
   margin-top: 15px;
   font-weight: bold;
-  color: #333;
+  color: var(--text);
 }
 
 /* Styling for inputs and textareas */
@@ -991,16 +891,24 @@ form textarea {
   width: 100%;
   padding: 10px;
   margin-top: 5px;
-  border: 2px solid #ccc;
-  border-radius: 6px;
+  background-color: var(--surface-dark);
+  border: 1px solid var(--accent-soft);
+  border-radius: 10px;
+  color: var(--text);
   font-size: 1em;
   transition: var(--transition-base); /* Smooth focus transitions */
+}
+
+form input::placeholder,
+form textarea::placeholder {
+  color: #8f8f8f;
 }
 
 /* Highlighting the input/textarea when focused */
 form input:focus,
 form textarea:focus {
-  border-color: #444;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-tint);
   outline: none;
 }
 
@@ -1157,8 +1065,7 @@ form button:hover {
   }
 
   .project-detail-actions,
-  .project-card-actions,
-  .project-links {
+  .project-card-actions {
     align-items: flex-start;
     flex-direction: column;
   }
@@ -1193,38 +1100,8 @@ form button:hover {
     font-size: 24px;
   }
 
-  /* Adjusts projects section height and layout */
-  #projects {
-    height: auto;
-    padding: 20px 0;
-    flex-direction: column;
-  }
-
-  /* Allows wrapping of the project slides and adjusts spacing */
-  #project-slides {
-    flex-direction: column;
-    flex-wrap: nowrap;
-    gap: 15px;
-    justify-content: center;
-    height: auto;
-    width: 100%;
-  }
-
-  /* Makes project cards full-width and adjusts height */
-  .project-card {
-    width: 100%;
-    min-height: 220px;
-  }
-
-  /* Allows description containers to expand */
-  .project-description {
-    width: calc(100vw - 130px);
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  input[name="slide"]:checked + .project-card {
-    width: 100%;
+  #projects.projects-grid {
+    grid-template-columns: 1fr;
   }
 
   /* Shrinks footer font and adjusts padding */

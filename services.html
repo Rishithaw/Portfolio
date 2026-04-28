@@ -176,126 +176,81 @@
 
         <h2>My Projects</h2>
         <p class="section-intro">Each project helped me practice building practical software, from Java systems to responsive web interfaces.</p>
-        <!-- Div tag containing the projects done in an image slider format -->
-        <div id="projects">
-            <div id="project-slides">
-
-                <!-- Slide1 -->
-                <input type="radio" name="slide" id="c1" checked>
-                <label for="c1" id="card1" class="project-card">
-                    <div id="row1" class="project-row">
-                        <div id="icon1" class="project-icon">1</div>
-                        <div id="description1" class="project-description">
-                            <h4>TERMINAL PROGRAM</h4>
-                            <p>A Java inventory tool with login authentication and terminal-based stock management workflows.</p>
-                            <a href="https://github.com/Rishithaw/Stock-Management" id="btn1" class="source-btn" target="_blank" rel="noopener noreferrer">Source
-                                Code</a>
-                        </div>
+        <div id="projects" class="projects-grid">
+            <article class="project-summary-card">
+                <img src="images/Driving.jpg" alt="BetterDrive project preview" loading="lazy" decoding="async">
+                <div>
+                    <h3>BetterDrive</h3>
+                    <p>A driving school management system built to organize students, vehicles, and daily operations.</p>
+                    <p class="project-tech">Java · Database Design · Management System</p>
+                    <div class="project-card-actions">
+                        <a class="details-link" href="projects/betterdrive.html">View Case Study</a>
+                        <a class="source-link" href="https://github.com/Rishithaw/Driving_School" target="_blank" rel="noopener noreferrer">Source Code</a>
                     </div>
-                </label>
+                </div>
+            </article>
 
-                <!-- Slide2 -->
-                <input type="radio" name="slide" id="c2">
-                <label for="c2" id="card2" class="project-card">
-                    <div id="row2" class="project-row">
-                        <div id="icon2" class="project-icon">2</div>
-                        <div id="description2" class="project-description">
-                            <h4>MANAGEMENT SYSTEM</h4>
-                            <p>A supermarket management system built with MVC architecture to organize business logic and data flow.</p>
-                            <a href="https://github.com/Rishithaw/gdse-71-mvc" id="btn2" class="source-btn" target="_blank" rel="noopener noreferrer">Source Code</a>
-                        </div>
+            <article class="project-summary-card">
+                <img src="images/Movie.jpg" alt="Movie Catalog project preview" loading="lazy" decoding="async">
+                <div>
+                    <h3>Movie Catalog</h3>
+                    <p>A web app for searching released movies and practicing dynamic JavaScript interactions.</p>
+                    <p class="project-tech">HTML · CSS · JavaScript</p>
+                    <div class="project-card-actions">
+                        <a class="details-link" href="projects/movie-catalog.html">View Case Study</a>
+                        <a class="source-link" href="https://github.com/Rishithaw/Movies" target="_blank" rel="noopener noreferrer">Source Code</a>
                     </div>
-                </label>
+                </div>
+            </article>
 
-                <!-- Slide3 -->
-                <input type="radio" name="slide" id="c3">
-                <label for="c3" id="card3" class="project-card">
-                    <div id="row3" class="project-row">
-                        <div id="icon3" class="project-icon">3</div>
-                        <div id="description3" class="project-description">
-                            <h4>TIC TAC TOE</h4>
-                            <p>A game where the player competes against a program using the Minimax algorithm for decisions.</p>
-                            <a href="https://github.com/Rishithaw/Tic-Tac-Toe" id="btn3" class="source-btn" target="_blank" rel="noopener noreferrer">Source Code</a>
-                        </div>
+            <article class="project-summary-card">
+                <img src="images/Portfolio.png" alt="Portfolio website project preview" loading="lazy" decoding="async">
+                <div>
+                    <h3>Portfolio Website</h3>
+                    <p>A responsive personal website for presenting my skills, education, services, and projects.</p>
+                    <p class="project-tech">HTML · CSS · JavaScript · Vercel</p>
+                    <div class="project-card-actions">
+                        <a class="details-link" href="projects/portfolio.html">View Case Study</a>
+                        <a class="source-link" href="https://github.com/Rishithaw/Portfolio" target="_blank" rel="noopener noreferrer">Source Code</a>
                     </div>
-                </label>
+                </div>
+            </article>
 
-                <!-- Slide4 -->
-                <input type="radio" name="slide" id="c4">
-                <label for="c4" id="card4" class="project-card">
-                    <div id="row4" class="project-row">
-                        <div id="icon4" class="project-icon">4</div>
-                        <div id="description4" class="project-description">
-                            <h4>BETTERDRIVE</h4>
-                            <p>A driving school management system built to organize students, vehicles, and daily operations.</p>
-                            <div class="project-links">
-                                <a href="projects/betterdrive.html" class="source-btn details-btn">Details</a>
-                                <a href="https://github.com/Rishithaw/Driving_School" id="btn4" class="source-btn" target="_blank" rel="noopener noreferrer">Source
-                                    Code</a>
-                            </div>
-                        </div>
+            <article class="project-summary-card">
+                <img src="images/Terminal.jpeg" alt="Terminal Program project preview" loading="lazy" decoding="async">
+                <div>
+                    <h3>Terminal Program</h3>
+                    <p>A Java inventory tool with login authentication and terminal-based stock management workflows.</p>
+                    <p class="project-tech">Java · Authentication · Inventory</p>
+                    <div class="project-card-actions">
+                        <a class="source-link" href="https://github.com/Rishithaw/Stock-Management" target="_blank" rel="noopener noreferrer">Source Code</a>
                     </div>
-                </label>
+                </div>
+            </article>
 
-                <!-- Slide5 -->
-                <input type="radio" name="slide" id="c5">
-                <label for="c5" id="card5" class="project-card">
-                    <div id="row5" class="project-row">
-                        <div id="icon5" class="project-icon">5</div>
-                        <div id="description5" class="project-description">
-                            <h4>IMAGE VIEWER</h4>
-                            <p>A desktop image viewer focused on file handling and a simple user interface.</p>
-                            <a href="https://github.com/Rishithaw/Image-Viewer" id="btn5" class="source-btn" target="_blank" rel="noopener noreferrer">Source
-                                Code</a>
-                        </div>
+            <article class="project-summary-card">
+                <img src="images/Tictactoe.jpg" alt="Tic Tac Toe project preview" loading="lazy" decoding="async">
+                <div>
+                    <h3>Tic Tac Toe</h3>
+                    <p>A game where the player competes against a program using the Minimax algorithm for decisions.</p>
+                    <p class="project-tech">Java · Game Logic · Minimax</p>
+                    <div class="project-card-actions">
+                        <a class="source-link" href="https://github.com/Rishithaw/Tic-Tac-Toe" target="_blank" rel="noopener noreferrer">Source Code</a>
                     </div>
-                </label>
+                </div>
+            </article>
 
-                <!-- Slide6 -->
-                <input type="radio" name="slide" id="c6">
-                <label for="c6" id="card6" class="project-card">
-                    <div id="row6" class="project-row">
-                        <div id="icon6" class="project-icon">6</div>
-                        <div id="description6" class="project-description">
-                            <h4>PORTFOLIO</h4>
-                            <p>A responsive personal website for presenting my skills, education, services, and projects.</p>
-                            <div class="project-links">
-                                <a href="projects/portfolio.html" class="source-btn details-btn">Details</a>
-                                <a href="https://github.com/Rishithaw/Portfolio" id="btn6" class="source-btn" target="_blank" rel="noopener noreferrer">Source Code</a>
-                            </div>
-                        </div>
+            <article class="project-summary-card">
+                <img src="images/Blog.png" alt="Blog Site project preview" loading="lazy" decoding="async">
+                <div>
+                    <h3>Blog Site</h3>
+                    <p>A web application for managing blog-style content and practicing full web page structure.</p>
+                    <p class="project-tech">HTML · CSS · Web Structure</p>
+                    <div class="project-card-actions">
+                        <a class="source-link" href="https://github.com/Rishithaw/Final-Project-Web-Dev" target="_blank" rel="noopener noreferrer">Source Code</a>
                     </div>
-                </label>
-
-                <!-- Slide7 -->
-                <input type="radio" name="slide" id="c7">
-                <label for="c7" id="card7" class="project-card">
-                    <div id="row7" class="project-row">
-                        <div id="icon7" class="project-icon">7</div>
-                        <div id="description7" class="project-description">
-                            <h4>MOVIE CATALOG</h4>
-                            <p>A web app for searching released movies and practicing dynamic JavaScript interactions.</p>
-                            <div class="project-links">
-                                <a href="projects/movie-catalog.html" class="source-btn details-btn">Details</a>
-                                <a href="https://github.com/Rishithaw/Movies" id="btn7" class="source-btn" target="_blank" rel="noopener noreferrer">Source Code</a>
-                            </div>
-                        </div>
-                    </div>
-                </label>
-
-                <!-- Slide8 -->
-                <input type="radio" name="slide" id="c8">
-                <label for="c8" id="card8" class="project-card">
-                    <div id="row8" class="project-row">
-                        <div id="icon8" class="project-icon">8</div>
-                        <div id="description8" class="project-description">
-                            <h4>BLOG SITE</h4>
-                            <p>A web application for managing blog-style content and practicing full web page structure.</p>
-                            <a href="https://github.com/Rishithaw/Final-Project-Web-Dev" id="btn8" class="source-btn" target="_blank" rel="noopener noreferrer">Source Code</a>
-                        </div>
-                    </div>
-                </label>
-            </div>
+                </div>
+            </article>
         </div>
     </section>
 
