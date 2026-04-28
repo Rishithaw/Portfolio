@@ -6,6 +6,7 @@
   --surface-dark: #111;
   --surface-muted: #262626;
   --surface-elevated: #343434;
+  --logo-plate: #f2f7fb;
   --text: #ffffff;
   --text-muted: #ccc;
   --accent: #00c6ff;
@@ -545,7 +546,7 @@ h1 {
 
 /* Styling the image in the cards */
 .edu-card img {
-  background-color: var(--surface-dark);
+  background-color: var(--logo-plate);
   border: 1px solid var(--accent-soft);
   border-radius: 16px;
   height: var(--logo-xl);
@@ -678,7 +679,7 @@ h1 {
 
 /* Styling each image in the div tag */
 .apps img {
-  background-color: var(--surface-muted);
+  background-color: var(--logo-plate);
   border: 1px solid var(--accent-soft);
   border-radius: 18px;
   width: var(--logo-lg);
@@ -770,7 +771,7 @@ h1 {
 
 /* Styling the image in the cards */
 .card img {
-  background-color: var(--surface-dark);
+  background-color: var(--logo-plate);
   border: 1px solid var(--accent-soft);
   border-radius: 18px;
   height: var(--logo-lg);
