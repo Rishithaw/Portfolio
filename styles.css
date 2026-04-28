@@ -1,8 +1,11 @@
 :root {
   --bg: #1c1c1c;
-  --surface: #2a2a2a;
+  --section-bg: #202020;
+  --section-bg-alt: #171717;
+  --surface: #303030;
   --surface-dark: #111;
-  --surface-muted: #242424;
+  --surface-muted: #262626;
+  --surface-elevated: #343434;
   --text: #ffffff;
   --text-muted: #ccc;
   --accent: #00c6ff;
@@ -10,7 +13,7 @@
   --accent-soft: #00c6ff22;
   --accent-tint: #00c6ff1a;
   --gradient-accent: linear-gradient(90deg, var(--accent), var(--accent-dark));
-  --shadow-soft: 0 0 12px rgba(0, 255, 255, 0.05);
+  --shadow-soft: 0 0 18px rgba(0, 255, 255, 0.07);
   --shadow-hover: 0 0 20px rgba(0, 255, 255, 0.2);
   --radius-card: 20px;
   --transition-base: 0.3s ease;
@@ -141,6 +144,7 @@ h1,
   align-items: center;
   justify-content: center;
   color: var(--text);
+  background: radial-gradient(circle at top, #12314155, transparent 34%), var(--bg);
 }
 
 /* Styling the image */
@@ -243,7 +247,8 @@ h1 {
 .featured-project-card,
 .edu-card,
 .card {
-  background-color: var(--surface);
+  background-color: var(--surface-elevated);
+  border: 1px solid var(--accent-soft);
   box-shadow: var(--shadow-soft);
 }
 
@@ -267,7 +272,6 @@ h1 {
 
 .skill-card,
 .featured-project-card {
-  border: 1px solid var(--accent-soft);
   padding: 24px;
   text-align: left;
 }
@@ -352,9 +356,18 @@ h1 {
 
 #about-me,
 #skills-section {
-  padding: 60px 20px 20px;
   text-align: center;
   width: 100%;
+}
+
+#about-me {
+  background-color: var(--section-bg-alt);
+  padding: 80px 20px;
+}
+
+#skills-section {
+  background-color: var(--section-bg);
+  padding: 80px 20px;
 }
 
 .about-content {
@@ -399,7 +412,8 @@ h1 {
 }
 
 #featured-projects {
-  padding: 60px 20px 20px;
+  background-color: var(--section-bg-alt);
+  padding: 80px 20px;
   text-align: center;
   width: 100%;
 }
@@ -458,9 +472,9 @@ h1 {
 
 /* Styling the section tag */
 #education-section {
-  padding: 60px 20px;
+  padding: 80px 20px;
   text-align: center;
-  background-color: var(--bg);
+  background-color: var(--section-bg);
   color: var(--text);
 }
 
@@ -582,9 +596,9 @@ h1 {
 
 /* Styling the main tag */
 #tools {
-  padding: 20px 20px 20px;
+  padding: 60px 20px;
   text-align: center;
-  background-color: var(--bg);
+  background: radial-gradient(circle at top, #12314155, transparent 34%), var(--bg);
   color: var(--text);
 }
 
@@ -633,8 +647,8 @@ h1 {
 
 /* Styling the section tag containing the services */
 #services-overview {
-  padding: 50px 20px;
-  background-color: var(--surface-dark);
+  padding: 80px 20px;
+  background-color: var(--section-bg-alt);
   color: var(--text);
   text-align: center;
 }
@@ -658,7 +672,7 @@ h1 {
 }
 
 .services {
-  background-color: #1f1f1f;
+  background-color: var(--surface-muted);
   border: 1px solid var(--accent-soft);
   padding: 24px;
   width: 260px;
@@ -671,9 +685,9 @@ h1 {
 
 /* Styling the section tag that holds the cards */
 #tech-stack {
-  padding: 60px 20px;
+  padding: 80px 20px;
   text-align: center;
-  background-color: var(--bg);
+  background-color: var(--section-bg);
   color: var(--text);
 }
 
@@ -733,7 +747,7 @@ h1 {
 }
 
 .project-summary-card {
-  background-color: var(--surface);
+  background-color: var(--surface-elevated);
   border: 1px solid var(--accent-soft);
   border-radius: 24px;
   box-shadow: var(--shadow-soft);
@@ -779,7 +793,8 @@ h1 {
 /* Start of project detail styling */
 .project-detail-main {
   color: var(--text);
-  padding: 60px 20px 20px;
+  background: radial-gradient(circle at top, #12314155, transparent 34%), var(--bg);
+  padding: 80px 20px;
 }
 
 .project-hero {
@@ -827,7 +842,7 @@ h1 {
 }
 
 .project-detail-card {
-  background-color: var(--surface);
+  background-color: var(--surface-elevated);
   border: 1px solid var(--accent-soft);
   border-radius: var(--radius-card);
   box-shadow: var(--shadow-soft);
@@ -856,7 +871,7 @@ h1 {
 
 /* Setting background color for the contact page */
 #contact-body {
-  background-color: var(--bg);
+  background: radial-gradient(circle at top, #12314155, transparent 34%), var(--bg);
 }
 
 /* Styling for the main contact form container */
@@ -962,7 +977,8 @@ form button:hover {
   display: flex;
   justify-content: center;
   min-height: 70vh;
-  padding: 60px 20px;
+  background: radial-gradient(circle at top, #12314155, transparent 34%), var(--bg);
+  padding: 80px 20px;
   text-align: center;
 }
 
@@ -1095,9 +1111,26 @@ form button:hover {
   /* Reduces font size for section headings */
   #tools h2,
   #tech-stack h2,
+  #featured-projects h2,
+  #skills-section h2,
   #education-section h2,
   #services-overview h2 {
     font-size: 24px;
+  }
+
+  #about-me,
+  #skills-section,
+  #featured-projects,
+  #education-section,
+  #services-overview,
+  #tech-stack {
+    padding: 60px 16px;
+  }
+
+  #tools,
+  .project-detail-main,
+  .not-found-main {
+    padding: 50px 16px;
   }
 
   #projects.projects-grid {
