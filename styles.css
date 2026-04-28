@@ -497,14 +497,16 @@ h1 {
 
 /* Styling the h1 tag that holds the name */
 #typer {
-  min-height: 50px;
+  min-height: 1.25em;
   color: transparent; /* Prevents flicker before JS types */
   font-weight: 800;
+  line-height: 1.2;
   white-space: nowrap;
-  overflow: hidden;
+  overflow: visible;
   border-right: 2px solid var(--text);
   width: fit-content;
   margin: 0 auto;
+  padding-bottom: 0.08em;
 }
 
 /* Styling the h2 tag that contains the span tag */
