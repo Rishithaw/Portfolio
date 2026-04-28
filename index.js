@@ -9,10 +9,10 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
     }
 
-    let nameIndex = 0; // Tracker to find whixh index it's on
+    let nameIndex = 0; // Tracker to find which index it is on
     let deletingName = false; // Boolean flag
 
-    // Function for typing an deleting
+    // Function for typing and deleting
     function typeName() {
 
         // Sets the text content based on typing or deleting
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Typing animation for rotating titles
-    let titles = ["Full Stack Developer", "UI/UX Designer", "Web Developer"]; // Array of titles to rotate through
+    let titles = ["Junior Software Developer", "Web Developer", "Full-Stack Developer Intern"]; // Array of titles to rotate through
     
     // Trackers
     let titleIndex = 0;

@@ -12,7 +12,25 @@ function validate(e) {
     }
 
     e.preventDefault();
-    showFormStatus("Thanks for reaching out. Your details are ready to send, and I will follow up as soon as possible.");
+
+    let nameValue = document.getElementById("name").value.trim();
+    let phoneValue = document.getElementById("phone").value.trim();
+    let emailValue = document.getElementById("email").value.trim();
+    let commentsValue = document.getElementById("comments").value.trim();
+
+    let subject = encodeURIComponent("Portfolio inquiry from " + nameValue);
+    let body = encodeURIComponent(
+        "Hi Rishitha,\n\n" +
+        "Name: " + nameValue + "\n" +
+        "Phone: " + phoneValue + "\n" +
+        "Email: " + emailValue + "\n\n" +
+        "Comments:\n" + (commentsValue || "N/A") + "\n"
+    );
+
+    let mailtoUrl = "mailto:rishithaw1@gmail.com?subject=" + subject + "&body=" + body;
+    window.location.href = mailtoUrl;
+
+    showFormStatus("Thanks for reaching out. Your email app should open with a pre-filled draft. If not, use the direct email link below.");
     e.target.reset();
     document.getElementById("name").focus();
     return false;
@@ -90,7 +108,7 @@ function formHasErrors() {
 
     if (!emailRegex.test(emailValue)) {
 
-        // Shows error message if ture
+        // Shows error message if true
         showError("email");
         if (!errorFlag) {
             document.getElementById("email").focus();
